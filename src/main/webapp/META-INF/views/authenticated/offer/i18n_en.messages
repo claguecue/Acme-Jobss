@@ -1,0 +1,20 @@
+authenticated.offer.list.label.title= Title
+authenticated.offer.list.label.limitDate= Limit date
+authenticated.offer.list.label.descriptionText= Description Text
+authenticated.offer.list.label.minAmount= Minimum Reward
+authenticated.offer.list.label.maxAmount= Maximum Reward
+authenticated.offer.list.label.creationMoment= Creation Moment
+authenticated.offer.list.label.ticker= Ticker
+
+authenticated.offer.form.label.title = Title
+authenticated.offer.form.label.creationMoment = Creation Moment
+authenticated.offer.form.label.limitDate = Deadline
+authenticated.offer.form.label.descriptionText = Description Text
+authenticated.offer.form.label.minAmount = Minimum Reward 
+authenticated.offer.form.label.maxAmount = Maximum Reward 
+authenticated.offer.form.label.ticker = Ticker
+authenticated.offer.form.button.return = Return
+
+master.menu.user-account.offer= Offers
+
+authenticated.offer.form.button.create= Create

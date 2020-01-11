@@ -1,0 +1,11 @@
+authenticated.auditorRequest.form.title.create = Request to become an auditor
+
+authenticated.auditorRequest.form.label.firm = Firm
+authenticated.auditorRequest.form.label.responsibilityStatement = Responsibility statement
+
+authenticated.auditorRequest.form.accepted = Congratulations, your petition has been accepted. Check your data under the Account tab of the menu!
+authenticated.auditorRequest.form.pending = Your request is in pending status.
+authenticated.auditorRequest.form.rejected = We are sorry, your request has been rejected.
+
+authenticated.auditorRequest.form.button.create = Request
+authenticated.auditorRequest.form.button.return = Return

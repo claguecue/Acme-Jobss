@@ -1,0 +1,29 @@
+# i18n_en.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+worker.job.list.label.reference = Reference
+worker.job.list.label.deadline = Deadline
+worker.job.list.label.title = Title
+
+
+worker.job.form.label.reference = Reference
+worker.job.form.label.title = Title
+worker.job.form.label.deadline = Deadline
+worker.job.form.label.salary = Salary
+worker.job.form.label.moreInfo = More information
+worker.job.form.label.description = Description
+
+worker.job.form.label.orem = Problem
+worker.job.form.label.duty = Duties list
+worker.job.form.label.audit = Audits list
+
+worker.job.form.button.return = Return
+
+worker.job.form.label.apply = Apply

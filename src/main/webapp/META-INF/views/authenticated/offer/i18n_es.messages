@@ -1,0 +1,22 @@
+authenticated.offer.list.label.title= Titulo
+authenticated.offer.list.label.limitDate= Fecha límite
+authenticated.offer.list.label.descriptionText= Descripción
+authenticated.offer.list.label.minAmount= Cantidad mínima
+authenticated.offer.list.label.maxAmount= Cantidad máxima
+authenticated.offer.list.label.creationMoment= Momento de creación
+authenticated.offer.list.label.ticker= Ticker
+
+
+
+authenticated.offer.form.label.title = Titulo
+authenticated.offer.form.label.creationMoment = Momento de creación
+authenticated.offer.form.label.limitDate = Fecha límite
+authenticated.offer.form.label.descriptionText = Descripción
+authenticated.offer.form.label.minAmount = Cantidad mínima
+authenticated.offer.form.label.maxAmount = Cantidad máxima
+authenticated.offer.form.label.ticker = Ticker
+authenticated.offer.form.button.return = Volver
+
+
+
+authenticated.offer.form.button.create= Crear

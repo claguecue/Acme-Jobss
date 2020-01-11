@@ -1,0 +1,47 @@
+# i18n_es.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+employer.job.list.label.reference = Referencia
+employer.job.list.label.deadline = Fecha límite
+employer.job.list.label.title = Título
+
+
+employer.job.form.label.reference = Referencia
+employer.job.form.label.title = Título
+employer.job.form.label.deadline = Fecha límite
+employer.job.form.label.salary = Salario
+employer.job.form.label.moreInfo = Información adicional
+employer.job.form.label.description = Descripción
+employer.job.form.label.finalMode = Público
+
+employer.job.form.label.duties = Lista de obligaciones
+employer.job.form.label.duties.create = Crear obligación
+employer.job.form.label.audit = Lista de auditorías
+
+employer.job.form.button.create = Crear
+employer.job.form.button.update = Actualizar
+employer.job.form.button.delete = Borrar
+
+employer.job.form.label.orem.create = Crear orem
+employer.job.form.label.orem.show = Orem
+
+employer.job.form.button.return = Volver
+
+
+errors.job.is.finalMode.description = No se puede poner modo final sin una descripción
+errors.job.is.finalMode.sumDuty = No se puede poner modo final si las obligaciones no suman el 100% de la carga de trabajo
+errors.job.is.finalMode.spam = No se puede poner el modo final si se usa un determinado número de palabras de Spam
+
+errors.job.salary.money.euro = La moneda tiene que ser euros '€' / 'EUR'
+errors.job.salary.money.amount-positive = La cantidad debe ser positiva
+errors.job.deadline.future = La fecha límite debe ser estar en futuro y a partir de una semana
+errors.job.reference.unique = La referencia debe ser unica
+
+errors.job.hasApplications = Un trabajo no puede borrarse si un trabajador lo ha solicitado

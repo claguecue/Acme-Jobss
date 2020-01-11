@@ -1,0 +1,11 @@
+
+sponsor.non-commercial-banner.form.label.picture = Imagen:
+sponsor.non-commercial-banner.form.label.targetURL = Enlace:
+sponsor.non-commercial-banner.form.label.slogan = Eslogan:
+sponsor.non-commercial-banner.form.label.jingle = Jingle:
+					
+sponsor.non-commercial-banner.form.button.return = Volver
+
+sponsor.non-commercial-banner.list.label.picture = Imagen
+sponsor.non-commercial-banner.list.label.slogan  = Eslogan
+sponsor.non-commercial-banner.list.label.targetURL  = Enlace

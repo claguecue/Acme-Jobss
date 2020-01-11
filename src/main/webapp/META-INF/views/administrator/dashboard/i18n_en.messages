@@ -1,0 +1,31 @@
+
+administrator.dashboard.form.label.ratioOfJobsHaveAOrem = Ratio of jobs that have a orem:
+administrator.dashboard.form.label.ratioOfOremsIncludeAMarker = Ratio of orems that include a marker:
+administrator.dashboard.form.label.ratioOfApplicationsIncludeAMarkerWithPassword = Ratio of applications that include a password-protected marker: 
+
+
+administrator.dashboard.form.label.numberOfAnnouncements = Number of Announcements:
+administrator.dashboard.form.label.numberOfCompanyRecords = Number of Company Records:
+administrator.dashboard.form.label.numberOfInvestorRecords = Number of Investor Records:
+
+administrator.dashboard.form.label.minimumRewardActiveRequests =Minimum Reward Active Requests:
+administrator.dashboard.form.label.maximumRewardActiveRequests =Maximum Reward Active Requests:
+administrator.dashboard.form.label.averageRewardActiveRequests =Average Reward Active Requests: 
+administrator.dashboard.form.label.stddevRewardActiveRequests =Standard Deviation Active Requests:
+
+administrator.dashboard.form.label.minimumRewardActiveOffersMin =Minimum Reward Active Offers (based on minimum reward):
+administrator.dashboard.form.label.maximumRewardActiveOffersMin =Maximum Reward Active Offers (based on minimum reward):
+administrator.dashboard.form.label.averageRewardActiveOffersMin =Average Reward Active Offers (based on minimum reward):
+administrator.dashboard.form.label.stddevRewardActiveOffersMin =Standard Deviation Active Offers (based on minimum reward):
+
+
+administrator.dashboard.form.label.minimumRewardActiveOffersMax =Minimum Reward Active Offers (based on maximum reward):
+administrator.dashboard.form.label.maximumRewardActiveOffersMax =Maximum Reward Active Offers (based on maximum reward):
+administrator.dashboard.form.label.averageRewardActiveOffersMax =Average Reward Active Offers (based on maximum reward):
+administrator.dashboard.form.label.stddevRewardActiveOffersMax =Standard Deviation Active Offers (based on maximum reward):
+
+administrator.dashboard.form.label.averageNumberofJobsPerEmployer =  Average number of Jobs per employer:
+administrator.dashboard.form.label.averageNumberofApplicationsPerWorker = Average number of applications per worker:
+administrator.dashboard.form.label.averageNumberofApplicationsPerEmployer = Average number of applications per employer:
+
+administrator.dashboard.form.button.return = Return

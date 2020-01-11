@@ -1,0 +1,28 @@
+worker.application.form.label.referenceNumber = Referencia
+worker.application.form.label.creationMoment = Momento de creación
+worker.application.form.label.status = Estado
+worker.application.form.label.statement = Declaración
+worker.application.form.label.skills = Habilidades
+worker.application.form.label.qualifications = Cualificaciones
+worker.application.form.label.worker = Trabajador
+worker.application.form.label.job = Empleo
+
+worker.application.form.button.return = Return
+
+worker.application.list.label.referenceNumber = Número de Referencia
+worker.application.list.label.creationMoment = Momento de Creación
+worker.application.list.label.status = Estado
+
+worker.application.form.label.job.reference = Número referencia de un trabajo
+
+worker.application.form.label.answer = Respuesta
+worker.application.form.label.marker = Marcador
+worker.application.form.label.password = Contraseña
+
+
+worker.application.form-buttom.create = Crear
+
+worker.application.error.duplicatedReference = El número de referencia debe ser único
+worker.application.error.answer = No puede estar en blanco
+worker.application.error.password = No se puede introducir una costraseña sin código
+worker.application.error.password.regex = La contraseña debe incluir 3 letras, 2 dígitos y 1 signo de puntuación

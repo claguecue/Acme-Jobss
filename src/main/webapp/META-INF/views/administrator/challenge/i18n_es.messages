@@ -1,0 +1,42 @@
+# i18n_es.messages
+#
+# Copyright (c) 2019 Aureliano Piqueras, based on Rafael Corchuelo's DP Starter project.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+administrator.challenge.form.label.title = Título
+administrator.challenge.form.label.deadline = Fecha límite
+administrator.challenge.form.label.description = Descripción
+administrator.challenge.form.label.gold = Oro
+administrator.challenge.form.label.silver= Plata
+administrator.challenge.form.label.bronze = Bronce
+administrator.challenge.form.label.reward = Recompensa
+administrator.challenge.form.label.goal = Meta
+	
+administrator.challenge.form.button.return = Volver
+
+administrator.challenge.list.label.title = Título
+administrator.challenge.list.label.deadline = Fecha Límite
+administrator.challenge.list.label.description = Descripción
+administrator.challenge.list.label.goldGoal = Meta Oro
+administrator.challenge.list.label.goldReward = Recompensa Oro
+administrator.challenge.list.label.silverGoal = Meta Plata
+administrator.challenge.list.label.silverReward = Recompensa Oro
+administrator.challenge.list.label.bronzeGoal = Meta Bronce
+administrator.challenge.list.label.bronzeReward = Recompensa Bronce
+
+
+administrator.challenge.form.button.create = Crear
+administrator.challenge.form.button.update = Actualizar
+administrator.challenge.form.button.delete = Borrar
+
+errors.challenge.deadline.future = La fecha debe estar en el futuro
+errors.challenge.reward.money.amount-positive = La cantidad debe ser positiva
+errors.challenge.reward.money.euro = La moneda tiene que ser el euro '€' / 'EUR'
+errors.challenge.goldReward.amount-major = La cantidad de oro debe ser mayor que la de plata y la de bronce
+errors.challenge.silverReward.amount-medium = La cantidad de plata debe ser mayor que la bronce y menor que la oro
+errors.challenge.bronzeReward.amount-minor = La cantidad del bronce debe ser menor que la de oro y la de plata

@@ -1,0 +1,39 @@
+consumer.offer.list.label.title= Title
+consumer.offer.list.label.limitDate= Limit date
+consumer.offer.list.label.descriptionText= Description Text
+consumer.offer.list.label.amount= Amount
+consumer.offer.list.label.creationMoment= Creation Moment
+consumer.offer.list.label.ticker= Ticker
+
+
+consumer.offer.form.label.title = Title
+consumer.offer.form.label.creationMoment = Creation Moment
+consumer.offer.form.label.limitDate = Deadline
+consumer.offer.form.label.descriptionText = Description Text
+
+consumer.offer.form.label.minAmount = Minimum salary
+consumer.offer.form.label.maxAmount = Maximum salary 
+consumer.offer.form.label.ticker = Ticker
+consumer.offer.form.button.return = Return
+
+master.menu.user-account.offer= Offers
+
+consumer.offer.form.button.create= Create
+
+consumer.offer.form.label.accept = I accept the conditions
+
+master.menu.consumer.create-offer= Create offer
+master.menu.consumer.list-offer= Offer list
+
+consumer.offer.error.no-euro = The currency must be in euro
+
+consumer.offer.error.smaller= Minimum salary must be smaller than  maximum 
+consumer.offer.error.bigger= Maximum salary must be bigger than minimum salary
+
+consumer.offer.error.must-accept= The conditions must be accepted
+consumer.offer.error.no-future= The limit date must be in the future
+consumer.offer.error.duplicated= Ticker must be unique
+
+consumer.offer.list.label.maxAmount= Maximum salary
+consumer.offer.list.label.minAmount= Minimum salary
+

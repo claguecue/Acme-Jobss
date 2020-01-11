@@ -1,0 +1,15 @@
+# i18n_es.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+administrator.dashboard.form.title.company-records = Empresas agrupadas por sector
+administrator.dashboard.form.title.investor = Inversores agrupados por sector
+
+administrator.dashboard.form.title.application = Aplicaciones agrupadas por estados
+administrator.dashboard.form.title.jobFinalMode = Trabajos agrupados por status

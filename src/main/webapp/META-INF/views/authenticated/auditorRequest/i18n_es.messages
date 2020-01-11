@@ -1,0 +1,11 @@
+authenticated.auditorRequest.form.title.create = Petición a rol de Auditor
+
+authenticated.auditorRequest.form.label.firm = Empresa
+authenticated.auditorRequest.form.label.responsibilityStatement = Declaración de reponsibilidad
+
+authenticated.auditorRequest.from.accepted = Enhorabuena, su petición ha sido aceptada. Maneje sus datos desde la pestaña de Cuenta del menú!
+authenticated.auditorRequest.form.pending = Tu petición sigue pendiente.
+authenticated.auditorRequest.form.rejected = Lo sentimos, su petición ha sido rechazada.
+
+authenticated.auditorRequest.form.button.create = Hacer la petición
+authenticated.auditorRequest.form.button.return = Volver

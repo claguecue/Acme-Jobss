@@ -1,0 +1,43 @@
+# i18n_es.messages
+#
+# Copyright (c) 2019 Aureliano Piqueras, based on Rafael Corchuelo's DP Starter project.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+administrator.commercial-banner.form.label.picture = Imagen:
+administrator.commercial-banner.form.label.targetURL = Enlace:
+administrator.commercial-banner.form.label.slogan = Eslogan:
+administrator.commercial-banner.form.label.creditCard = Tarjeta de Credito
+administrator.commercial-banner.form.label.holderName = Nombre:
+administrator.commercial-banner.form.label.creditCardNumber = Número de Tarjeta de Crédito:
+administrator.commercial-banner.form.label.expirationYear = Año de Expiración:
+administrator.commercial-banner.form.label.expirationMonth = Mes de Expiración:
+administrator.commercial-banner.form.label.cvv: Código CVV:
+					
+administrator.commercial-banner.form.button.create = Crear
+administrator.commercial-banner.form.button.update = Actualizar
+administrator.commercial-banner.form.button.delete = Borrar
+administrator.commercial-banner.form.button.return = Volver
+administrator.commercial-banner.expirationMonth.expired = Mes expirado
+administrator.commercial-banner.expirationYear.expired = Año expirado
+
+administrator.commercial-banner.list.label.picture = Imagen
+administrator.commercial-banner.list.label.slogan  = Eslogan
+administrator.commercial-banner.list.label.targetURL  = Enlace
+
+administrator.commercial-banner.form.label.expirationMonth.January = Enero
+administrator.commercial-banner.form.label.expirationMonth.February = Febrero
+administrator.commercial-banner.form.label.expirationMonth.March = Marzo
+administrator.commercial-banner.form.label.expirationMonth.April = Abril
+administrator.commercial-banner.form.label.expirationMonth.May = Mayo
+administrator.commercial-banner.form.label.expirationMonth.June = Junio
+administrator.commercial-banner.form.label.expirationMonth.July = Julio
+administrator.commercial-banner.form.label.expirationMonth.August = Agosto
+administrator.commercial-banner.form.label.expirationMonth.September = Septiembre
+administrator.commercial-banner.form.label.expirationMonth.October = Octubre
+administrator.commercial-banner.form.label.expirationMonth.November = Noviembre
+administrator.commercial-banner.form.label.expirationMonth.December = Diciembre

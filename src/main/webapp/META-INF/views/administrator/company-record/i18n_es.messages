@@ -1,0 +1,22 @@
+# i18n_es.messages
+#
+# Copyright (c) 2019 Lizseth Esquen, based on Rafael Corchuelo DP files
+
+administrator.company-record.list.label.name = Empresa
+administrator.company-record.list.label.sector = Sector 
+administrator.company-record.list.label.starNumber = Estrellas
+
+administrator.company-record.form.label.name = Nombre de la empresa:
+administrator.company-record.form.label.sector = Sector:
+administrator.company-record.form.label.ceo = Nombre del CEO :
+administrator.company-record.form.label.description = Descripción de actividades:
+administrator.company-record.form.label.website = Página Web:
+administrator.company-record.form.label.phone = Teléfono:
+administrator.company-record.form.label.email = Correo electrónico:
+administrator.company-record.form.label.isInc = es sociedad limitada:
+administrator.company-record.form.label.starNumber = Estrellas:
+
+administrator.company-record.form-buttom.create = Crear
+administrator.company-record.form-buttom.delete = Borrar
+administrator.company-record.form-buttom.update = Modificar
+administrator.company-record.button.return = Atrás

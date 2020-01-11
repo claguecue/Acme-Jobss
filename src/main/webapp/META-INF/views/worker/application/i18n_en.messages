@@ -1,0 +1,27 @@
+worker.application.form.label.referenceNumber = Reference
+worker.application.form.label.creationMoment = Creation moment
+worker.application.form.label.status = Status
+worker.application.form.label.statement = Statement
+worker.application.form.label.skills = Skills
+worker.application.form.label.qualifications = Qualifications
+worker.application.form.label.worker = Worker
+worker.application.form.label.job = Job
+
+worker.application.form.button.return = Return
+
+worker.application.list.label.referenceNumber = Reference Number
+worker.application.list.label.creationMoment = Creation Moment
+worker.application.list.label.status = Status
+
+worker.application.form.label.job.reference = Job reference
+
+worker.application.form.label.answer = Answer
+worker.application.form.label.marker = Marker
+worker.application.form.label.password = Password
+
+worker.application.form-buttom.create = Create
+
+worker.application.error.duplicatedReference = Reference number must be unique
+worker.application.error.answer = Must not be blank
+worker.application.error.password = Can't introduce a password without a code
+worker.application.error.password.regex = The password must be include 3 letters, 2 digits, and 1 punctuation symbols

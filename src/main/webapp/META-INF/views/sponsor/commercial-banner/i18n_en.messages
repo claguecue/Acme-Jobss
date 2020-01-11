@@ -1,0 +1,32 @@
+
+sponsor.commercial-banner.form.label.picture = Picture:
+sponsor.commercial-banner.form.label.targetURL = Target:
+sponsor.commercial-banner.form.label.slogan = Slogan:
+sponsor.commercial-banner.form.label.creditCard = Credit Card
+sponsor.commercial-banner.form.label.holderName = Holder Name:
+sponsor.commercial-banner.form.label.creditCardNumber = Credit Card Number:
+sponsor.commercial-banner.form.label.expirationMonth = Expiration Month:
+sponsor.commercial-banner.form.label.expirationYear = Expiration Year:
+sponsor.commercial-banner.form.label.cvv: CVV:
+					
+sponsor.commercial-banner.form.button.return = Return
+
+sponsor.commercial-banner.expirationMonth.expired = Expired Month
+sponsor.commercial-banner.expirationYear.expired = Expired Year
+
+sponsor.commercial-banner.list.label.picture = Picture
+sponsor.commercial-banner.list.label.slogan  = Slogan
+sponsor.commercial-banner.list.label.targetURL  = Target
+
+sponsor.commercial-banner.form.label.expirationMonth.January = January
+sponsor.commercial-banner.form.label.expirationMonth.February = February
+sponsor.commercial-banner.form.label.expirationMonth.March = March
+sponsor.commercial-banner.form.label.expirationMonth.April = April
+sponsor.commercial-banner.form.label.expirationMonth.May = May
+sponsor.commercial-banner.form.label.expirationMonth.June = June
+sponsor.commercial-banner.form.label.expirationMonth.July = July
+sponsor.commercial-banner.form.label.expirationMonth.August = August
+sponsor.commercial-banner.form.label.expirationMonth.September = September
+sponsor.commercial-banner.form.label.expirationMonth.October = October
+sponsor.commercial-banner.form.label.expirationMonth.November = November
+sponsor.commercial-banner.form.label.expirationMonth.December = December

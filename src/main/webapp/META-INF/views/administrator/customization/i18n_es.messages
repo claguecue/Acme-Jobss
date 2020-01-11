@@ -1,0 +1,21 @@
+# i18n_es.messages
+#
+# Copyright (c) 2019 Aureliano Piqueras, based on Rafael Corchuelo's DP Starter project.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+administrator.customization.form.label.spamThreshold = Límite Spam %:
+administrator.customization.form.label.spamWords = Palabras Spam:
+
+	
+administrator.customization.form.button.return = Volver
+
+administrator.customization.list.label.spamThreshold = Límite Spam %
+administrator.customization.list.label.spamWords = Palabras Spam
+
+administrator.customization.form.button.update = Actualizar
+administrator.customization.error.no-inline = Texto not valido 

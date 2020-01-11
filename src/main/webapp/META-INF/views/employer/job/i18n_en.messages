@@ -1,0 +1,47 @@
+# i18n_en.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+employer.job.list.label.reference = Reference
+employer.job.list.label.deadline = Deadline
+employer.job.list.label.title = Title
+
+
+employer.job.form.label.reference = Reference
+employer.job.form.label.title = Title
+employer.job.form.label.deadline = Deadline
+employer.job.form.label.salary = Salary
+employer.job.form.label.moreInfo = More information
+employer.job.form.label.description = Description
+employer.job.form.label.finalMode = Published
+
+employer.job.form.label.duties = Duties list
+employer.job.form.label.duties.create = Create duty
+employer.job.form.label.audit = Audits list
+
+employer.job.form.button.create = Create
+employer.job.form.button.update = Update
+employer.job.form.button.delete = Delete
+
+employer.job.form.label.orem.create = Create orem
+employer.job.form.label.orem.show = Orem
+
+employer.job.form.button.return = Return
+
+
+errors.job.is.finalMode.description = Is finalMode when has a descriptor
+errors.job.is.finalMode.sumDuty = Is finalMode when the duties sum up to 100% the weekly workload
+errors.job.is.finalMode.spam = Is finalMode when it’s not considered spam
+
+errors.job.salary.money.euro = The money must be in euro '€' / 'EUR'
+errors.job.salary.money.amount-positive = The amount must be positive
+errors.job.deadline.future = Deadline must be in future and within a week
+errors.job.reference.unique = The reference must be unique
+
+errors.job.hasApplications = A job can be deleted as long as no worker has applied for it

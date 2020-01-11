@@ -1,0 +1,33 @@
+# i18n_es.messages
+#
+# Copyright (c) 2019 Aureliano Piqueras, based on Rafael Corchuelo's DP Starter project.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+provider.request.form.label.ticker = Identificador
+provider.request.form.label.creationMoment = Momento de creación 
+provider.request.form.label.title = Titulo
+provider.request.form.label.deadline = Fecha límite
+provider.request.form.label.text = Texto
+provider.request.form.label.reward = Gratificación
+
+provider.request.form.button.return = Volver
+
+provider.request.list.label.ticker = Identificador
+provider.request.list.label.creationMoment = Momento de creación
+provider.request.list.label.title = Titulo
+provider.request.list.label.deadline = Fecha límite
+provider.request.list.label.text = Texto
+provider.request.list.label.reward = Gratificación
+provider.request.form.label.accept = Confirmar Guardado
+provider.request.form.button.create = Crear
+
+provider.request.error.negative-amount = Debe ser positivo
+provider.request.error.no-future = Debe ser futura
+provider.request.error.must-accept = Debe confirmar el guardado
+provider.request.error.duplicated = Identificador duplicado
+provider.request.error.no-euro = Moneda no válida

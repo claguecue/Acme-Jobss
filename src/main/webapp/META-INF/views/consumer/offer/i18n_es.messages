@@ -1,0 +1,44 @@
+# i18n_es.messages
+
+
+consumer.offer.list.label.title= Titulo
+consumer.offer.list.label.limitDate= Fecha límite
+consumer.offer.list.label.descriptionText= Descripción
+consumer.offer.form.label.minAmount = Salario mínimo
+consumer.offer.form.label.maxAmount = Salario máximo 
+consumer.offer.list.label.creationMoment= Momento de creación
+consumer.offer.list.label.ticker= Ticker
+
+
+
+consumer.offer.form.label.title = Titulo
+consumer.offer.form.label.creationMoment = Momento de creación
+consumer.offer.form.label.limitDate = Fecha límite
+consumer.offer.form.label.descriptionText = Descripción
+consumer.offer.form.label.amount = Cantidad 
+consumer.offer.form.label.ticker = Ticker
+
+consumer.offer.form.button.return = Volver
+
+
+
+consumer.offer.form.button.create= Crear
+
+consumer.offer.form.label.accept = Acepto las condiciones
+
+master.menu.consumer.create-offer= Crear oferta
+master.menu.consumer.list-offer= Lista de ofertas
+
+
+consumer.offer.error.no-euro = La divisa debe ser en euros
+
+consumer.offer.error.smaller= El salario mínimo debe ser menor que el salario máximo  
+consumer.offer.error.bigger= El salario máximo debe ser mayor que el salario mínimo
+
+consumer.offer.error.must-accept= Las condiciones deber ser aceptadas
+consumer.offer.error.no-future= La fecha límite debe ser en el futuro
+consumer.offer.error.duplicated= El ticker no puede estar duplicado
+
+consumer.offer.list.label.maxAmount= Salario máximo
+consumer.offer.list.label.minAmount= Salario mínimo
+
