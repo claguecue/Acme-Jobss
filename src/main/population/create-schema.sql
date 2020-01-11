@@ -26,10 +26,7 @@
     create table `application` (
        `id` integer not null,
         `version` integer not null,
-        `answer` varchar(255),
         `creation_moment` datetime(6),
-        `marker` varchar(255),
-        `password` varchar(255),
         `qualifications` varchar(255),
         `reference_number` varchar(255),
         `reject_justification` varchar(255),
@@ -226,15 +223,6 @@
         primary key (`id`)
     ) engine=InnoDB;
 
-    create table `orem` (
-       `id` integer not null,
-        `version` integer not null,
-        `marker` varchar(255),
-        `text` varchar(255),
-        `job_id` integer not null,
-        primary key (`id`)
-    ) engine=InnoDB;
-
     create table `provider` (
        `id` integer not null,
         `version` integer not null,
@@ -311,9 +299,6 @@ create index IDX8ix743uifflnrs9bupbn6y0h4 on `job` (`reference`);
 
     alter table `offer` 
        add constraint UK_iex7e8fs0fh89yxpcnm1orjkm unique (`ticker`);
-
-    alter table `orem` 
-       add constraint UK_fbhn1cp84e2r7dm00f851q9o1 unique (`job_id`);
 
     alter table `request` 
        add constraint `UKh9syauj4iixf18uts83saik5d` unique (`ticker`);
@@ -400,11 +385,6 @@ create index IDX8ix743uifflnrs9bupbn6y0h4 on `job` (`reference`);
        add constraint `FKpcpr0xb5k7s4rxv5pulstt5v9` 
        foreign key (`sponsor_id`) 
        references `sponsor` (`id`);
-
-    alter table `orem` 
-       add constraint `FK5lh1628w0y3y5of8nvggwxvpo` 
-       foreign key (`job_id`) 
-       references `job` (`id`);
 
     alter table `provider` 
        add constraint FK_b1gwnjqm6ggy9yuiqm0o4rlmd 
