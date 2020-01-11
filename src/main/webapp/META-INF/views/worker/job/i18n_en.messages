@@ -20,7 +20,6 @@ worker.job.form.label.salary = Salary
 worker.job.form.label.moreInfo = More information
 worker.job.form.label.description = Description
 
-worker.job.form.label.orem = Problem
 worker.job.form.label.duty = Duties list
 worker.job.form.label.audit = Audits list
 

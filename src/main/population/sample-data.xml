@@ -384,9 +384,6 @@
   		<property name="skills" value="The ability to work under pressure and creativity." />
   		<property name="qualifications" value="Software Engineer" />
   		<property name="rejectJustification"><null/></property>
-  		<property name="answer" value="This is the answer to the application1 in job1" />
-  		<property name="marker" value="ABCD-1234" />
-  		<property name="password" value="pass.12" />
   		<property name="worker" ref="worker1Worker" />
   		<property name="job" ref="job1" />
   	</bean>
@@ -399,9 +396,6 @@
   		<property name="skills" value="Commercial awareness and teamworking skills" />
   		<property name="qualifications" value="Software Engineer" />
   		<property name="rejectJustification"><null/></property>
-  		<property name="answer" value="This is the answer to the application2 in job2" />
-  		<property name="marker" value="5678-YUIO" />
-  		<property name="password"><null/></property>
   		<property name="worker" ref="worker1Worker" />
   		<property name="job" ref="job2" />
   	</bean>
@@ -414,9 +408,6 @@
   		<property name="skills" value="Commercial awareness and teamworking skills" />
   		<property name="qualifications" value="Software Engineer" />
   		<property name="rejectJustification"><null/></property>
-  		<property name="answer" value="This is the answer to the application3 in job3" />
-  		<property name="marker" value="EFGH-5678" />
-  		<property name="password" value="pass.99" />
   		<property name="worker" ref="worker1Worker" />
   		<property name="job" ref="job3" />
   	</bean>
@@ -429,9 +420,6 @@
   		<property name="skills" value="Commercial awareness and teamworking skills" />
   		<property name="qualifications" value="Software Engineer" />
   		<property name="rejectJustification"><null/></property>
-  		<property name="answer" value="This is the answer to the application4 in job3" />
-  		<property name="marker"><null/></property>
-  		<property name="password"><null/></property>
   		<property name="worker" ref="worker2Worker" />
   		<property name="job" ref="job3" />
   	</bean>
@@ -444,9 +432,6 @@
 		<property name="skills" value="application skills" />
 		<property name="qualifications" value="application5 cualifications" />
 		<property name="rejectJustification"><null/></property>
-		<property name="answer" value="This is the answer to the application5 in job1" />
-  		<property name="marker" value="1234-ABCD" />
-  		<property name="password" value="pass.55" />
 		<property name="worker" ref="worker2Worker" />
 		<property name="job" ref="job1" />
 	</bean>
@@ -459,9 +444,6 @@
 		<property name="skills" value="application skills" />
 		<property name="qualifications" value="application6 cualifications" />
 		<property name="rejectJustification"><null/></property>
-		<property name="answer" value="This is the answer to the application6 in job3" />
-  		<property name="marker"><null/></property>
-  		<property name="password"><null/></property>
 		<property name="worker" ref="worker1Worker" />
 		<property name="job" ref="job3" />
   	</bean>
@@ -475,9 +457,6 @@
   		<property name="skills" value="Commercial awareness and teamworking skills" />
   		<property name="qualifications" value="Software Engineer" />
   		<property name="rejectJustification"><null/></property>
-  		<property name="answer"><null/></property>
-  		<property name="marker"><null/></property>
-  		<property name="password"><null/></property>
   		<property name="worker" ref="worker2Worker" />
   		<property name="job" ref="job6" />
   	</bean>
@@ -538,30 +517,7 @@
   		<property name="auditor" ref="auditor2Auditor"/>
   		<property name="job" ref="job1"/>
   	</bean>
-  	
-  	
-  	
-  	<!-- Problems -->
-  	
-  	<bean name="orem1" class="acme.entities.orems.Orem">
-  		<property name="text" value="This is the text that describes the problem 1." />
-  		<property name="marker" value="http://www.problem1.com" />
-  		<property name="job" ref="job1" />
-  	</bean>
-  	
-  	<bean name="orem2" class="acme.entities.orems.Orem">
-  		<property name="text" value="This is the text that describes the problem 2." />
-  		<property name="marker" value="http://www.problem2.com" />
-  		<property name="job" ref="job2" />
-  	</bean>
-  	
-  	<bean name="orem3" class="acme.entities.orems.Orem">
-  		<property name="text" value="This is the text that describes the problem 3." />
-  		<property name="marker"><null/></property>
-  		<property name="job" ref="job3" />
-  	</bean>
-  
-	
+  		
 	
 	
 	<!-- Announcements -->

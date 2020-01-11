@@ -29,8 +29,6 @@ employer.job.form.button.create = Create
 employer.job.form.button.update = Update
 employer.job.form.button.delete = Delete
 
-employer.job.form.label.orem.create = Create orem
-employer.job.form.label.orem.show = Orem
 
 employer.job.form.button.return = Return
 

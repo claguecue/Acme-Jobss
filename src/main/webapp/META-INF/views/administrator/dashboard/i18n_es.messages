@@ -1,10 +1,4 @@
 
-administrator.dashboard.form.label.ratioOfJobsHaveAOrem = Proporción de trabajos que tienen un orem:
-administrator.dashboard.form.label.ratioOfOremsIncludeAMarker = Proporción de orems que incluyen un marcador:
-administrator.dashboard.form.label.ratioOfApplicationsIncludeAMarkerWithPassword = Proporción de aplicaciones que incluyen un marcador protegido por contraseña:
-
-
-
 administrator.dashboard.form.label.numberOfAnnouncements = Número de Anuncios:
 administrator.dashboard.form.label.numberOfCompanyRecords = Número de Compañias:
 administrator.dashboard.form.label.numberOfInvestorRecords = Número de Inversores:

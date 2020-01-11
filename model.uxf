@@ -511,8 +511,8 @@ Announcement
     <coordinates>
       <x>826</x>
       <y>497</y>
-      <w>329</w>
-      <h>154</h>
+      <w>280</w>
+      <h>126</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 Application
@@ -523,10 +523,7 @@ Application
 + status: String{Pattern(),NotNull}
 + statement: String{NotBlank}
 + skills: String{NotBlank}
-+ quialifications: String{NotBlank}
-- answer: String
-- marker: String
-- password: String{Pattern(^(?=.*[A-Za-z]){1,}(?=.*[0-9]){1,}(?=.*[\\W]){1,}[A-Za-z0-9\\W]{10,}$|^$)}</panel_attributes>
++ quialifications: String{NotBlank}</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -859,34 +856,5 @@ m1=0..*
 m2=1
 &lt; Created by</panel_attributes>
     <additional_attributes>260.0;10.0;10.0;40.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>84</x>
-      <y>602</y>
-      <w>203</w>
-      <h>77</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;Entity&gt;&gt;
-Orem
---
-+ text: String{NotBlank, length(max=150)}
-- marker:String{URL}</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>280</x>
-      <y>609</y>
-      <w>182</w>
-      <h>35</h>
-    </coordinates>
-    <panel_attributes>lt=x-&gt;
-m1=1
-m2=1
-Is having  &gt;</panel_attributes>
-    <additional_attributes>10.0;20.0;240.0;20.0</additional_attributes>
   </element>
 </diagram>

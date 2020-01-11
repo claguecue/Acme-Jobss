@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 import acme.entities.audits.Audit;
 import acme.entities.duties.Duty;
 import acme.entities.jobs.Job;
-import acme.entities.orems.Orem;
 import acme.entities.roles.Worker;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
@@ -41,12 +40,10 @@ public class WorkerJobShowService implements AbstractShowService<Worker, Job> {
 
 		Collection<Duty> duties = this.repository.findDutyByJobId(entity.getId());
 		Collection<Audit> audits = this.repository.findAuditByJobId(entity.getId());
-		Collection<Orem> orems = this.repository.findOremByJobId(entity.getId());
 
 		request.unbind(entity, model, "id", "reference", "deadline", "title", "salary", "moreInfo", "description", "finalMode");
 		model.setAttribute("listDutyEmpty", duties.isEmpty());
 		model.setAttribute("listAuditEmpty", audits.isEmpty());
-		model.setAttribute("listOremEmpty", orems.isEmpty());
 	}
 
 	@Override

@@ -78,20 +78,9 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		entity.setAverageNumberofApplicationsPerWorker(averageNumberofApplicationsPerWorker);
 		entity.setAverageNumberofApplicationsPerEmployer(averageNumberofApplicationsPerEmployer);
 
-		// Control check -------------------------------------------------------------------------------------------
-
-		Double ratioOfJobsHaveAOrem = this.repository.ratioOfJobsHaveAOrem();
-		Double ratioOfOremsIncludeAMarker = this.repository.ratioOfOremsIncludeAMarker();
-		Double ratioOfApplicationsIncludeAMarkerWithPassword = this.repository.ratioOfApplicationsIncludeAMarkerWithPassword();
-
-		entity.setRatioOfJobsHaveAOrem(ratioOfJobsHaveAOrem);
-		entity.setRatioOfOremsIncludeAMarker(ratioOfOremsIncludeAMarker);
-		entity.setRatioOfApplicationsIncludeAMarkerWithPassword(ratioOfApplicationsIncludeAMarkerWithPassword);
-
 		request.unbind(entity, model, "numberOfAnnouncements", "numberOfCompanyRecords", "numberOfInvestorRecords", "minimumRewardActiveRequests", "maximumRewardActiveRequests", "averageRewardActiveRequests", "stddevRewardActiveRequests",
 			"minimumRewardActiveOffersMin", "maximumRewardActiveOffersMin", "averageRewardActiveOffersMin", "stddevRewardActiveOffersMin", "minimumRewardActiveOffersMax", "maximumRewardActiveOffersMax", "averageRewardActiveOffersMax",
-			"stddevRewardActiveOffersMax", "averageNumberofJobsPerEmployer", "averageNumberofApplicationsPerWorker", "averageNumberofApplicationsPerEmployer", "ratioOfJobsHaveAOrem", "ratioOfOremsIncludeAMarker",
-			"ratioOfApplicationsIncludeAMarkerWithPassword");
+			"stddevRewardActiveOffersMax", "averageNumberofJobsPerEmployer", "averageNumberofApplicationsPerWorker", "averageNumberofApplicationsPerEmployer");
 	}
 
 	@Override

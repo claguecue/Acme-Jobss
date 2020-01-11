@@ -1,13 +1,10 @@
 
 package acme.features.worker.application;
 
-import java.util.Collection;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.applications.Application;
-import acme.entities.orems.Orem;
 import acme.entities.roles.Worker;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
@@ -33,25 +30,8 @@ public class WorkerApplicationShowService implements AbstractShowService<Worker,
 		assert entity != null;
 		assert model != null;
 
-		Collection<Orem> orems = this.repository.findOremsByJob(entity.getJob().getId());
-
-		Boolean hasPassword = true;
-		String password = this.repository.findPasswordOfApp(request.getModel().getInteger("id"));
-		if (password == null || password.isEmpty()) {
-			hasPassword = false;
-		}
-
-		Boolean hasMarker = true;
-		String marker = this.repository.findMarkerOfApp(request.getModel().getInteger("id"));
-		if (marker == null || marker.isEmpty()) {
-			hasMarker = false;
-		}
-
 		request.unbind(entity, model, "referenceNumber", "creationMoment", "status");
-		request.unbind(entity, model, "statement", "skills", "qualifications", "answer", "marker", "password", "job.reference", "worker.userAccount.username", "employer.userAccount.username");
-		model.setAttribute("listOremEmpty", orems.isEmpty());
-		model.setAttribute("noHasPassword", !hasPassword);
-		model.setAttribute("hasMarker", hasMarker);
+		request.unbind(entity, model, "statement", "skills", "qualifications", "job.reference", "worker.userAccount.username", "employer.userAccount.username");
 	}
 
 	@Override

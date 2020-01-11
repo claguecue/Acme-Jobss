@@ -26,7 +26,6 @@
 	
 	<acme:form-hidden path="id"/>
 	<acme:form-submit test="${command != 'create'}" code="worker.job.form.label.apply" action="/worker/application/create?id=${id}" method="get"/>
-	<acme:form-submit test="${!listOremEmpty}" code="worker.job.form.label.orem" action="/authenticated/orem/list?id=${id}" method="get"/>
 	<acme:form-submit test="${!listDutyEmpty}" code="worker.job.form.label.duty" action="/authenticated/duty/list?id=${id}" method="get"/>
 	<acme:form-submit test="${!listAuditEmpty}" code="worker.job.form.label.audit" action="/authenticated/audit/list?id=${id}" method="get"/>
 	<acme:form-return code="worker.job.form.button.return"/>

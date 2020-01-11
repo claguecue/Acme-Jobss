@@ -1,7 +1,6 @@
 
 package acme.features.worker.application;
 
-import java.util.Collection;
 import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +9,6 @@ import org.springframework.stereotype.Service;
 import acme.entities.applications.Application;
 import acme.entities.applications.ApplicationStatus;
 import acme.entities.jobs.Job;
-import acme.entities.orems.Orem;
 import acme.entities.roles.Worker;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
@@ -50,11 +48,8 @@ public class WorkerApplicationCreateService implements AbstractCreateService<Wor
 		assert entity != null;
 		assert model != null;
 
-		Collection<Orem> orems = this.repository.findOremsByJob(request.getModel().getInteger("id"));
-
-		request.unbind(entity, model, "referenceNumber", "statement", "skills", "qualifications", "answer", "marker", "password");
+		request.unbind(entity, model, "referenceNumber", "statement", "skills", "qualifications");
 		model.setAttribute("id", request.getModel().getInteger("id"));
-		model.setAttribute("listOremEmpty", orems.isEmpty());
 	}
 
 	@Override
@@ -69,20 +64,12 @@ public class WorkerApplicationCreateService implements AbstractCreateService<Wor
 		idJob = request.getModel().getInteger("id");
 		result = new Application();
 
-		Collection<Orem> orems = this.repository.findOremsByJob(idJob);
-		Boolean hasOrems = !orems.isEmpty();
-
 		Date moment;
 		moment = new Date(System.currentTimeMillis() - 1);
 		result.setCreationMoment(moment);
 		result.setStatus(ApplicationStatus.PENDING);
 		result.setWorker(this.repository.findOneWorkerById(accountId));
 		result.setJob(this.repository.findOneJobById(idJob));
-		if (!hasOrems) {
-			result.setAnswer(null);
-			result.setMarker(null);
-			result.setPassword(null);
-		}
 
 		return result;
 	}
@@ -97,27 +84,6 @@ public class WorkerApplicationCreateService implements AbstractCreateService<Wor
 			Boolean unique = null;
 			unique = this.repository.findApplicationByReferenceNumber(entity.getReferenceNumber()) != null;
 			errors.state(request, !unique, "referenceNumber", "worker.application.error.duplicatedReference");
-		}
-
-		Collection<Orem> problems = this.repository.findOremsByJob(entity.getJob().getId());
-		if (!problems.isEmpty()) {
-			if (!errors.hasErrors("answer")) {
-				Boolean hasAnswer = null;
-				hasAnswer = !request.getModel().getString("answer").isEmpty();
-				errors.state(request, hasAnswer, "answer", "worker.application.error.answer");
-			}
-
-			if (!errors.hasErrors("password")) {
-				Boolean hasMarkerPassword, hasMarker, hasPassword = null;
-				hasMarker = !request.getModel().getString("marker").isEmpty();
-				hasPassword = !request.getModel().getString("password").isEmpty();
-				if (!hasMarker && hasPassword) {
-					hasMarkerPassword = false;
-				} else {
-					hasMarkerPassword = true;
-				}
-				errors.state(request, hasMarkerPassword, "password", "worker.application.error.password");
-			}
 		}
 
 	}
