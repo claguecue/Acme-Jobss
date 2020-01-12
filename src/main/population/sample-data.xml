@@ -553,7 +553,7 @@
 <!-- Request -->
 
 	<bean class="acme.entities.requests.Request" id="request1">
-		<property value="RABCD-1234" name="ticker"/>
+		<property value="RABCD-12345" name="ticker"/>
 		<property value="2018/01/05 11:00" name="creationMoment"/>
 		<property value="2020/01/05 11:00" name="deadline"/>
 		<property value="Engineers Wanted!" name="title"/>
@@ -567,7 +567,7 @@
 	</bean>
 	
 	<bean class="acme.entities.requests.Request" id="request2">
-		<property value="RABCD-1235" name="ticker"/>
+		<property value="RABCD-12356" name="ticker"/>
 		<property value="2018/01/06 11:00" name="creationMoment"/>
 		<property value="2020/01/06 11:00" name="deadline"/>
 		<property value="Maths Wanted!" name="title"/>
@@ -582,7 +582,7 @@
 	
 		
 	<bean class="acme.entities.requests.Request" id="request3">
-		<property value="RABCD-1236" name="ticker"/>
+		<property value="RABCD-12367" name="ticker"/>
 		<property value="2018/03/06 11:00" name="creationMoment"/>
 		<property value="2020/03/06 11:00" name="deadline"/>
 		<property value="Developers Wanted!" name="title"/>
@@ -606,7 +606,7 @@
 	  <property name="website" value=" http://acme.es " />
 	  <property name="phone" value="+666 (9999) 55555555"/>
 	  <property name="email" value="acme@company.com"/>
-      <property name="isInc" value="false"/>  
+      <property name="isInc" value="true"/>  
 	  <property name="starNumber" value="3"/>
 	   
  	 </bean>
@@ -619,7 +619,7 @@
 	  <property name="website" value=" http://companyus.es " />
 	  <property name="phone" value="+456 (1299) 75585595"/>
 	  <property name="email" value="cus@empresa.com"/>
-	  <property name="isInc" value="true"/> 
+	  <property name="isInc" value="false"/> 
 	  <property name="starNumber" value="5"/>
 	   
 	 </bean>
