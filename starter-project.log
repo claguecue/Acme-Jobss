@@ -1,0 +1,5 @@
+ERROR [org.hibernate.internal.ExceptionMapperStandardImpl] HHH000346: Error during managed flush [Row was updated or deleted by another transaction (or unsaved-value mapping was incorrect) : [acme.entities.roles.Consumer#1298]]
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP POST /acme-jobs/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:335): Object of class [acme.entities.roles.Consumer] with identifier [1298]: optimistic locking failed; nested exception is org.hibernate.StaleObjectStateException: Row was updated or deleted by another transaction (or unsaved-value mapping was incorrect) : [acme.entities.roles.Consumer#1298]
+org.hibernate.persister.entity.AbstractEntityPersister.check(AbstractEntityPersister.java:2527): Row was updated or deleted by another transaction (or unsaved-value mapping was incorrect) : [acme.entities.roles.Consumer#1298]
