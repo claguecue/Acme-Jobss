@@ -58,6 +58,10 @@ footer {
 	padding: 15px;
 }
 
+/*  img.img-fluid {
+   
+}   */
+
 .form-control::-webkit-input-placeholder { /* Webkit friends */
   	color: #c5cbd4;
 }
