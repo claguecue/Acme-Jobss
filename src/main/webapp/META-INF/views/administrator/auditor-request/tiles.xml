@@ -19,11 +19,11 @@
 <tiles-definitions>
 	
 	<definition name="administrator/auditor-request/form" extends="master">
-		<put-attribute name="body" type="template" value="../administrator/auditorRequest/form.jsp" />
+		<put-attribute name="body" type="template" value="../administrator/auditor-request/form.jsp" />
 	</definition>
 	
 	<definition name="administrator/auditor-request/list" extends="master">
-		<put-attribute name="body" type="template" value="../administrator/auditorRequest/list.jsp" />
+		<put-attribute name="body" type="template" value="../administrator/auditor-request/list.jsp" />
 	</definition>
 	
 </tiles-definitions>

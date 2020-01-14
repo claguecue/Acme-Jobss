@@ -1,0 +1,13 @@
+administrator.auditor-request.list.label.firm = Empresa
+administrator.auditor-request.list.label.responsibilityStatement = Declaración de responsabilidad
+administrator.auditor-request.list.label.status = Status
+
+administrator.auditor-request.contextData = Solicitud realizada por
+
+administrator.auditor-request.form.label.username = Usuario
+administrator.auditor-request.form.label.firm = Empresa
+administrator.auditor-request.form.label.responsibilityStatement = Declaración de responsabilidad
+
+administrator.auditor-request.form.button.accept = Aceptar
+administrator.auditor-request.form.button.reject = Rechazar
+administrator.auditor-request.form.button.return = Volver
