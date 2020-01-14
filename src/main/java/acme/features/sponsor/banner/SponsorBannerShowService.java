@@ -55,6 +55,8 @@ public class SponsorBannerShowService implements AbstractShowService<Sponsor, No
 		int id;
 
 		id = request.getModel().getInteger("id");
+		//		result = this.repository.findOneBannerById(id);
+
 		result = this.repository.findOneBannerById(id);
 
 		return result;

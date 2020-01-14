@@ -95,6 +95,8 @@
 
     drop table if exists `authenticated`;
 
+    drop table if exists `banner`;
+
     drop table if exists `challenge`;
 
     drop table if exists `commercial_banner`;
