@@ -1,0 +1,8 @@
+authenticated.sponsor.form.label.organisationName = Organisation name
+authenticated.sponsor.form.label.creditCard = Credit card number
+
+authenticated.sponsor.form.button.create = Register
+authenticated.sponsor.form.button.update = Update
+authenticated.sponsor.form.button.return = Return
+
+errors.rol.sponsor.creditCard.format = The number credit card is not valid

@@ -17,10 +17,12 @@
 
 <acme:form>
 	<acme:form-textbox code="authenticated.thread.form.label.title" path="title" />
-	<acme:form-moment code="authenticated.thread.form.label.creationMoment" path="creationMoment"/>
+	<jstl:if test="${command != 'create' }">
+		<acme:form-moment code="authenticated.thread.form.label.creationMoment" path="creationMoment" readonly="true"/>
+	</jstl:if>
 	
 	<acme:form-hidden path="id"/>
-	<acme:form-submit code="authenticated.thread.form.label.messages" action="/authenticated/message/list?id=${id}" method="get"/> 
+	<acme:form-submit test="${!messagesEmpty}" code="authenticated.thread.form.label.messages" action="/authenticated/message/list?id=${id}" method="get"/> 
 
   	<acme:form-return code="authenticated.thread.form.button.return"/>
 </acme:form>

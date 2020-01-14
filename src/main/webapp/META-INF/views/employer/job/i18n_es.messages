@@ -40,5 +40,6 @@ errors.job.salary.money.euro = La moneda tiene que ser euros '€' / 'EUR'
 errors.job.salary.money.amount-positive = La cantidad debe ser positiva
 errors.job.deadline.future = La fecha límite debe ser estar en futuro y a partir de una semana
 errors.job.reference.unique = La referencia debe ser unica
+errors.job.description.spam = No puede contener palabras de spam
 
 errors.job.hasApplications = Un trabajo no puede borrarse si un trabajador lo ha solicitado

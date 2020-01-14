@@ -45,6 +45,7 @@ public class CommercialBanner extends Banner {
 	private Integer				cvv;
 
 	// Relationships -----------------------------------------------------------------------------------
+
 	@NotNull
 	@Valid
 	@ManyToOne(optional = false)

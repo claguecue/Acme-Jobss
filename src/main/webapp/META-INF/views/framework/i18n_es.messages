@@ -35,20 +35,6 @@ master.menu.administrator.dashboard = Panel de indicadores
 master.menu.administrator.user-accounts = Cuentas de usuario
 master.menu.administrator.shutdown = Parar el sistema
 
-# master.menu.provider ########################################################
-
-master.menu.provider = Empleador
-master.menu.provider.create-job = Crear un trabajo
-master.menu.provider.all-jobs = Ver todos los trabajos
-master.menu.provider.my-jobs = Ver mis trabajos
-master.menu.provider.my-applications = Ver mis solicitudes
-
-# master.menu.consumer ##########################################################
-
-master.menu.consumer = Trabajador
-master.menu.consumer.all-jobs = Ver todos los trabajos
-master.menu.consumer.my-applications = Ver mis solicitudes
-
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Cuenta

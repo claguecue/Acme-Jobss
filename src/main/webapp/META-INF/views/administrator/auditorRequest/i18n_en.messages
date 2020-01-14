@@ -1,0 +1,13 @@
+administrator.auditorRequest.list.label.firm = Firm
+administrator.auditorRequest.list.label.responsibilityStatement = Responsibility statement
+administrator.auditorRequest.list.label.status = Status
+
+administrator.auditorRequest.contextData = Request made by
+
+administrator.auditorRequest.form.label.username = Username
+administrator.auditorRequest.form.label.firm = Firm
+administrator.auditorRequest.form.label.responsibilityStatement = Responsibility statement
+
+administrator.auditorRequest.form.button.accept = Accept
+#####administrator.auditorRequest.form.button.reject = Reject
+administrator.auditorRequest.form.button.return = Return

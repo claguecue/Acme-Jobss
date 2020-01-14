@@ -39,10 +39,6 @@
        drop 
        foreign key `FKd0k52g7lcacefcp62kb4p9aor`;
 
-    alter table `consumer` 
-       drop 
-       foreign key FK_6cyha9f1wpj0dpbxrrjddrqed;
-
     alter table `duty` 
        drop 
        foreign key `FKs2uoxh4i5ya8ptyefae60iao1`;
@@ -62,10 +58,6 @@
     alter table `non_commercial_banner` 
        drop 
        foreign key `FKpcpr0xb5k7s4rxv5pulstt5v9`;
-
-    alter table `provider` 
-       drop 
-       foreign key FK_b1gwnjqm6ggy9yuiqm0o4rlmd;
 
     alter table `sponsor` 
        drop 
@@ -95,15 +87,11 @@
 
     drop table if exists `authenticated`;
 
-    drop table if exists `banner`;
-
     drop table if exists `challenge`;
 
     drop table if exists `commercial_banner`;
 
     drop table if exists `company_record`;
-
-    drop table if exists `consumer`;
 
     drop table if exists `customization`;
 
@@ -120,8 +108,6 @@
     drop table if exists `non_commercial_banner`;
 
     drop table if exists `offer`;
-
-    drop table if exists `provider`;
 
     drop table if exists `request`;
 

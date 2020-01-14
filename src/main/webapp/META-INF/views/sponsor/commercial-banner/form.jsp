@@ -30,9 +30,13 @@
 	<acme:form-integer code="sponsor.commercial-banner.form.label.expirationYear" path="expirationYear" placeholder="2019"/>
 	<acme:form-textbox code="sponsor.commercial-banner.form.label.cvv" path="cvv" placeholder="1234"/> 
 
-	
 	</acme:form-panel>
 	
+	<acme:form-submit test="${command == 'show' }" code="sponsor.commercial-banner.form.button.update" action="/sponsor/commercial-banner/update"/>
+	<acme:form-submit test="${command == 'show' }" code="sponsor.commercial-banner.form.button.delete" action="/sponsor/commercial-banner/delete"/>
+	<acme:form-submit test="${command == 'create' }" code="sponsor.commercial-banner.form.button.create" action="/sponsor/commercial-banner/create"/> 
+	<acme:form-submit test="${command == 'update' }" code="sponsor.commercial-banner.form.button.update" action="/sponsor/commercial-banner/update"/>
+	<acme:form-submit test="${command == 'delete' }" code="sponsor.commercial-banner.form.button.delete" action="/sponsor/commercial-banner/delete"/>	
 	
   	<acme:form-return code="sponsor.commercial-banner.form.button.return"/>
 </acme:form>

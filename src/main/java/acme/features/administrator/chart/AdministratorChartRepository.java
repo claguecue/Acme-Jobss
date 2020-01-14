@@ -17,15 +17,6 @@ public interface AdministratorChartRepository extends AbstractRepository {
 	@Query("select i.sector, count(i) from Investor i group by i.sector order by i.sector")
 	Collection<Object[]> getInvestorBySector();
 
-	//	@Query("select 1.0 * count(a)/ (select count(b) from Application b) from Application a" + " where a.status = acme.entities.applications.ApplicationStatus.PENDING")
-	//	Double ratioOfPendingApplications();
-	//
-	//	@Query("select 1.0 * count(a)/ (select count(b) from Application b) from Application a" + " where a.status = acme.entities.applications.ApplicationStatus.ACCEPTED")
-	//	Double ratioOfAcceptedApplications();
-	//
-	//	@Query("select 1.0 * count(a)/ (select count(b) from Application b) from Application a" + " where a.status = acme.entities.applications.ApplicationStatus.REJECTED")
-	//	Double ratioOfRejectedApplications();
-
 	@Query("select j.finalMode, count(j) from Job j group by j.finalMode order by j.finalMode")
 	Collection<Object[]> getJobByFinalMode();
 

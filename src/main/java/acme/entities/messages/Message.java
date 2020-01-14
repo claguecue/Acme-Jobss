@@ -21,11 +21,6 @@ import lombok.Setter;
 @Getter
 @Setter
 
-/*
- * message in a thread, the system must store a title, a creation moment,
- * an optional list of tags, and a body
- */
-
 public class Message extends DomainEntity {
 
 	private static final long	serialVersionUID	= 1L;

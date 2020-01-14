@@ -1,13 +1,13 @@
 
-sponsor.commercial-banner.form.label.picture = Picture:
-sponsor.commercial-banner.form.label.targetURL = Target:
-sponsor.commercial-banner.form.label.slogan = Slogan:
+sponsor.commercial-banner.form.label.picture = Picture
+sponsor.commercial-banner.form.label.targetURL = Target
+sponsor.commercial-banner.form.label.slogan = Slogan
 sponsor.commercial-banner.form.label.creditCard = Credit Card
-sponsor.commercial-banner.form.label.holderName = Holder Name:
-sponsor.commercial-banner.form.label.creditCardNumber = Credit Card Number:
-sponsor.commercial-banner.form.label.expirationMonth = Expiration Month:
-sponsor.commercial-banner.form.label.expirationYear = Expiration Year:
-sponsor.commercial-banner.form.label.cvv: CVV:
+sponsor.commercial-banner.form.label.holderName = Holder Name
+sponsor.commercial-banner.form.label.creditCardNumber = Credit Card Number
+sponsor.commercial-banner.form.label.expirationMonth = Expiration Month
+sponsor.commercial-banner.form.label.expirationYear = Expiration Year
+sponsor.commercial-banner.form.label.cvv = CVV
 					
 sponsor.commercial-banner.form.button.return = Return
 
@@ -17,6 +17,10 @@ sponsor.commercial-banner.expirationYear.expired = Expired Year
 sponsor.commercial-banner.list.label.picture = Picture
 sponsor.commercial-banner.list.label.slogan  = Slogan
 sponsor.commercial-banner.list.label.targetURL  = Target
+
+sponsor.commercial-banner.form.button.create = Create
+sponsor.commercial-banner.form.button.update = Update
+sponsor.commercial-banner.form.button.delete = Delete
 
 sponsor.commercial-banner.form.label.expirationMonth.January = January
 sponsor.commercial-banner.form.label.expirationMonth.February = February
@@ -30,3 +34,6 @@ sponsor.commercial-banner.form.label.expirationMonth.September = September
 sponsor.commercial-banner.form.label.expirationMonth.October = October
 sponsor.commercial-banner.form.label.expirationMonth.November = November
 sponsor.commercial-banner.form.label.expirationMonth.December = December
+
+sponsor.noHaveCreditCard = The sponsor haven't got a credit card, so can't create the banner
+errors.job.description.spam = Can't contain spam words

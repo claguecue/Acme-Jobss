@@ -38,7 +38,6 @@ public class AdministratorChartShowService implements AbstractShowService<Admini
 		assert request != null;
 		assert entity != null;
 		assert model != null;
-		//"jobStatus"
 		request.unbind(entity, model, "companySector", "investorSector", "jobFinalMode", "applicationStatus");
 	}
 

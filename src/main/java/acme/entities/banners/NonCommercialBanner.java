@@ -23,6 +23,7 @@ public class NonCommercialBanner extends Banner {
 	private String				jingle;
 
 	// Relationships -----------------------------------------------------------------------------------
+
 	@NotNull
 	@Valid
 	@ManyToOne(optional = false)

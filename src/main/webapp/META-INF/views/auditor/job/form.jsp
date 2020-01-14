@@ -27,7 +27,8 @@
 	<acme:form-hidden path="id"/>
 	
 	<acme:form-submit test="${command != 'create' && !listDutyEmpty}" code="auditor.job.form.label.duties" action="/authenticated/duty/list?id=${id}" method="get"/>
-	<acme:form-submit test="${command != 'create' && !listAuditEmpty}" code="auditor.job.form.label.audit" action="/auditor/audit/list?id=${id}" method="get"/>
+	<acme:form-submit test="${command != 'create' && !listAuditEmpty && !noAuditsByMe}" code="auditor.job.form.label.audit" action="/auditor/audit/list?id=${id}" method="get"/>
+	<acme:form-submit test="${command != 'create' && !listAuditEmpty && noAuditsByMe}" code="auditor.job.form.label.audit" action="/auditor/audit/list_main?id=${id}" method="get"/>
 	<acme:form-submit test="${command != 'create' }" code="auditor.audit.form.label.audits.create" action="/auditor/audit/create?id=${id}" method="get"/>	
 	
 	<acme:form-return code="auditor.job.form.button.return"/>
