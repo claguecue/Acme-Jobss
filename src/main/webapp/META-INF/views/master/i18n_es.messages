@@ -60,11 +60,6 @@ master.menu.administrator.announcement.create = Crear anuncio
 master.menu.administrator.company-record.list = Lista de empresas
 master.menu.administrator.company-record.create = Crear empresa
 
-master.menu.administrator.commercial-banner.list = Lista de Banners Comerciales
-master.menu.administrator.commercial-banner.create = Crear Banner Comercial
-master.menu.administrator.non-commercial-banner.list = Lista de Banners No Comerciales
-master.menu.administrator.non-commercial-banner.create = Crear Banner No Comercial
-
 master.menu.user-account.auditor-requests = Peticiones de auditor
 
 # master.menu.authenticated ###################################################
@@ -77,16 +72,6 @@ master.menu.authenticated.company-record = Lista de empresas
 master.menu.authenticated.investor = Lista de inversores
 master.menu.authenticated.challenge = Lista de retos
 master.menu.authenticated.job.list = Lista de trabajos activos
-
-# master.menu.provider ########################################################
-
-master.menu.provider = Proveedor
-master.menu.provider.favourite-link = Enlace favorito
-
-# master.menu.consumer ##########################################################
-
-master.menu.consumer = Consumidor
-master.menu.consumer.favourite-link = Enlace favorito
 
 
 # master.menu.employer ##########################################################
@@ -111,24 +96,29 @@ master.menu.auditor= Auditor
 master.menu.auditor.list.job.yes = Trabajos auditados por mi
 master.menu.auditor.list.job.no = Trabajos no auditados por mi
 
-# master.menu.auditor ##########################################################
+# master.menu.sponsor ##########################################################
 
 master.menu.sponsor = Patrocinador
-master.menu.sponsor.list.non-commercial-banner = Banner no comercial
-master.menu.sponsor.list.commercial-banner  = Banner comercial
+master.menu.sponsor.list.commercial-banner  = Baner comercial
+master.menu.sponsor.commercial-banner.create = Crear baner comercial
+master.menu.sponsor.list.non-commercial-banner = Baner no comercial
+master.menu.sponsor.non-commercial-banner.create = Crear baner no comercial
 
 
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Cuenta
 master.menu.user-account.general-data = Datos generales
-master.menu.user-account.provider = Datos de proveedor
-master.menu.user-account.become-provider = Hazte proveedor
-master.menu.user-account.consumer = Datos de consumidor
-master.menu.user-account.become-consumer = Hazte consumidor
 
-
-
+master.menu.user-account.worker = Datos trabajador
+master.menu.user-account.become-worker = Hazte trabajador
+master.menu.user-account.employer = Datos empleador
+master.menu.user-account.become-employer = Hazte empleador
+master.menu.user-account.auditor = Datos auditor
+master.menu.user-account.become-auditor = Hazte auditor
+master.menu.user-account.become-sponsor = Hazte patrocinador
+master.menu.user-account.sponsor = Datos patrocinador
+master.menu.user-account.auditor-requests = Solicitudes de auditor
 
 
 ﻿# master.footer ###############################################################

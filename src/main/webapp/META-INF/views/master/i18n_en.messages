@@ -60,11 +60,6 @@ master.menu.administrator.announcement.create = Create announcement
 master.menu.administrator.company-record.list = Company record list
 master.menu.administrator.company-record.create = Create company record
 
-master.menu.administrator.commercial-banner.list = Commercial Banner List
-master.menu.administrator.commercial-banner.create = Commercial Banner Create
-master.menu.administrator.non-commercial-banner.list = Non Commercial Banner List
-master.menu.administrator.non-commercial-banner.create = Non Commercial Banner Create
-
 master.menu.user-account.auditor-requests = Auditor requests
 
 
@@ -79,16 +74,6 @@ master.menu.authenticated.investor = Investor list
 master.menu.authenticated.challenge = Challenge list
 master.menu.authenticated.job.list= Active Job list
 
-
-# master.menu.provider ########################################################
-
-master.menu.provider = Provider
-master.menu.provider.favourite-link = Favourite link
-
-# master.menu.consumer ##########################################################
-
-master.menu.consumer = Consumer
-master.menu.consumer.favourite-link = Favourite link
 
 # master.menu.employer #########################################################
 
@@ -121,18 +106,16 @@ master.menu.user-account.auditor = Auditor data
 # master.menu.sponsor ##########################################################
 
 master.menu.sponsor = Sponsor
-master.menu.sponsor.list.non-commercial-banner = Non commercial banner
 master.menu.sponsor.list.commercial-banner  = Commercial banner
+master.menu.sponsor.commercial-banner.create = Create commercial banner
+master.menu.sponsor.list.non-commercial-banner = Non commercial banner
+master.menu.sponsor.non-commercial-banner.create = Create non commercial banner
 
 
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Account
 master.menu.user-account.general-data = General data
-master.menu.user-account.provider = Provider data
-master.menu.user-account.become-provider = Become a provider
-master.menu.user-account.consumer = Consumer data
-master.menu.user-account.become-consumer = Become a consumer
 
 master.menu.user-account.worker = Worker data
 master.menu.user-account.become-worker = Become a worker
@@ -140,6 +123,9 @@ master.menu.user-account.employer = Employer data
 master.menu.user-account.become-employer = Become a employer
 master.menu.user-account.auditor = Auditor data
 master.menu.user-account.become-auditor = Become an auditor
+master.menu.user-account.become-sponsor = Become a sponsor
+master.menu.user-account.sponsor = Sponsor data
+master.menu.user-account.auditor-requests = Auditor requests
 
 
 # master.footer ###############################################################

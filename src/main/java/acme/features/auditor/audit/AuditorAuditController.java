@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import acme.components.CustomCommand;
 import acme.entities.audits.Audit;
 import acme.entities.roles.Auditor;
 import acme.framework.components.BasicCommand;
@@ -33,6 +34,9 @@ public class AuditorAuditController extends AbstractController<Auditor, Audit> {
 	@Autowired
 	private AuditorAuditDeleteService	deleteService;
 
+	@Autowired
+	private AuditorAuditListMainService	listMainService;
+
 
 	// Constructors --------------------------------------------------------------------
 
@@ -43,6 +47,7 @@ public class AuditorAuditController extends AbstractController<Auditor, Audit> {
 		super.addBasicCommand(BasicCommand.CREATE, this.createService);
 		super.addBasicCommand(BasicCommand.UPDATE, this.updateService);
 		super.addBasicCommand(BasicCommand.DELETE, this.deleteService);
+		super.addCustomCommand(CustomCommand.LIST_MAIN, BasicCommand.LIST, this.listMainService);
 
 	}
 

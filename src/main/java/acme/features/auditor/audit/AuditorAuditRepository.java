@@ -29,4 +29,7 @@ public interface AuditorAuditRepository extends AbstractRepository {
 	@Query("select a from Audit a where a.job.id = ?1")
 	Collection<Audit> findManyByJobId(int jobId);
 
+	@Query("select a from Audit a where a.job.id = ?1 and a.status = true")
+	Collection<Audit> findListManyByJobId(int jobId);
+
 }

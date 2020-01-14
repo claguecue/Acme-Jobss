@@ -109,10 +109,43 @@ public class EmployerJobCreateService implements AbstractCreateService<Employer,
 			errors.state(request, isEuro, "salary", "errors.job.salary.money.euro", "The money must be in euro '€' / 'EUR'");
 		}
 
+		// Validación de Spam
+		if (!errors.hasErrors("reference")) {
+			Boolean isSpam = this.spam(entity.getReference());
+			errors.state(request, !isSpam, "reference", "errors.job.description.spam", "Contain spam words");
+		}
+
+		if (!errors.hasErrors("title")) {
+			Boolean isSpam = this.spam(entity.getTitle());
+			errors.state(request, !isSpam, "title", "errors.job.description.spam", "Contain spam words");
+		}
+
+		if (!errors.hasErrors("description")) {
+			Boolean isSpam = this.spam(entity.getDescription());
+			errors.state(request, !isSpam, "description", "errors.job.description.spam", "Contain spam words");
+		}
+
+		if (!errors.hasErrors("moreInfo")) {
+			Boolean isSpam = this.spam(entity.getMoreInfo());
+			errors.state(request, !isSpam, "moreInfo", "errors.job.description.spam", "Contain spam words");
+		}
+
 	}
 
 	@Override
 	public void create(final Request<Job> request, final Job entity) {
 		this.repository.save(entity);
+	}
+
+	private Boolean spam(final String string) {
+		Boolean result = false;
+		String spam = this.repository.findCustomization().getSpamWords();
+		String[] listaSpam = spam.trim().split(",");
+		for (String palabra : listaSpam) {
+			if (string.contains(palabra)) {
+				result = true;
+			}
+		}
+		return result;
 	}
 }

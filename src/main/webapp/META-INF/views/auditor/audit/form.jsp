@@ -16,17 +16,29 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:form>
-	<acme:form-textbox code="auditor.audit.form.label.title" path="title"/>
-	<acme:form-textbox code="auditor.audit.form.label.body" path="body"/>
-	<jstl:if test="${command != 'create' }">
-		<acme:form-moment code="auditor.audit.form.label.creationMoment" path="creationMoment" readonly="true"/>
+	<jstl:if test="${status == false}">
+		<acme:form-textbox code="auditor.audit.form.label.title" path="title"/>
+		<acme:form-textbox code="auditor.audit.form.label.body" path="body"/>
+		<jstl:if test="${command != 'create' }">
+			<acme:form-moment code="auditor.audit.form.label.creationMoment" path="creationMoment" readonly="true"/>
+		</jstl:if>
+		<acme:form-checkbox code="auditor.audit.form.label.status" path="status"/>
+		<acme:form-submit test="${command == 'show' }" code="auditor.audit.form.button.update" action="/auditor/audit/update"/>
+		<acme:form-submit test="${command == 'show' }" code="auditor.audit.form.button.delete" action="/auditor/audit/delete"/>
 	</jstl:if>
-	<acme:form-checkbox code="auditor.audit.form.label.status" path="status"/>
+	
+	<jstl:if test="${status == true}">
+		<acme:form-textbox code="auditor.audit.form.label.title" path="title" readonly="true"/>
+		<acme:form-textbox code="auditor.audit.form.label.body" path="body" readonly="true"/>
+		<jstl:if test="${command != 'create' }">
+			<acme:form-moment code="auditor.audit.form.label.creationMoment" path="creationMoment" readonly="true"/>
+		</jstl:if>
+		<acme:form-checkbox code="auditor.audit.form.label.status" path="status" readonly="true"/>
+		<acme:form-submit test="${command == 'show' }" code="auditor.audit.form.button.delete" action="/auditor/audit/delete"/>
+	</jstl:if>
 	
 	
 	<acme:form-hidden path="id"/>
-	<acme:form-submit test="${command == 'show' }" code="auditor.audit.form.button.update" action="/auditor/audit/update"/>
-	<acme:form-submit test="${command == 'show' }" code="auditor.audit.form.button.delete" action="/auditor/audit/delete"/>
 	<acme:form-submit test="${command == 'create' }" code="auditor.audit.form.button.create" action="/auditor/audit/create"/> 
 	<acme:form-submit test="${command == 'update' }" code="auditor.audit.form.button.update" action="/auditor/audit/update"/>
 	<acme:form-submit test="${command == 'delete' }" code="auditor.audit.form.button.delete" action="/auditor/audit/delete"/>

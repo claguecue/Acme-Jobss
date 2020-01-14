@@ -52,8 +52,6 @@ public class AnonymousAnnouncementListService implements AbstractListService<Ano
 
 		result = this.repository.findManyBetween(date2, date1);
 
-		/* result = this.repository.findManyAll(); */
-
 		return result;
 	}
 

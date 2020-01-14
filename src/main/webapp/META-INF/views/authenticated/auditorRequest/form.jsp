@@ -36,5 +36,10 @@
 		<acme:form-submit test="${command == 'create'}" code="authenticated.auditorRequest.form.button.create" action="/authenticated/auditor-request/create"/>
 	</jstl:if>
 	
+	<jstl:if test="${command == 'show'}">	
+		<br/><acme:form-textbox code="authenticated.auditorRequest.form.label.firm" path="firm" readonly="true"/>
+		<acme:form-textarea code="authenticated.auditorRequest.form.label.responsibilityStatement" path="statement" readonly="true"/>
+	</jstl:if>
+	
 	<acme:form-return code="authenticated.auditorRequest.form.button.return"/>
 </acme:form>

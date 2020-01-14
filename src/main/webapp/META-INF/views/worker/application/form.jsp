@@ -5,7 +5,7 @@
 
 <acme:form>
 
-	<acme:form-textbox code="worker.application.form.label.referenceNumber" path="referenceNumber" />
+	<acme:form-textbox code="worker.application.form.label.referenceNumber" path="referenceNumber" placeholder="EMPX-JOBX:WORX"/>
 	<jstl:if test="${command != 'create' }">
 		<acme:form-textbox code="worker.application.form.label.creationMoment" path="creationMoment" />
 		<acme:form-textbox code="worker.application.form.label.status" path="status" />

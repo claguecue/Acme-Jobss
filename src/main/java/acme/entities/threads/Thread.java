@@ -24,10 +24,6 @@ public class Thread extends DomainEntity {
 
 	private static final long	serialVersionUID	= 1L;
 
-	/*
-	 * threads, for which the system must store a title,
-	 * the moment when it is created, and the users involved in it
-	 */
 	@NotBlank
 	private String				title;
 
@@ -36,18 +32,11 @@ public class Thread extends DomainEntity {
 	@Past
 	private Date				creationMoment;
 
-	// users involved in it = relación entre hilos y usuarios
-
 	// Relationships
 
 	@NotNull
 	@Valid
 	@ManyToOne(optional = false)
 	private Authenticated		authenticated;
-
-	//	@NotEmpty
-	//	@Valid
-	//	@OneToMany
-	//	private Collection<Message>	message;
 
 }

@@ -524,28 +524,28 @@
 	
 	<bean id="announcement01" class="acme.entities.announcements.Announcement">
 		<property name="title" value="Sample announcement 01"/>
-		<property name="moment" value="2019/10/31 14:30"/>
+		<property name="moment" value="2019/12/30 14:30"/>
 		<property name="moreInfo"><null/></property>
 		<property name="text" value="This is the first description"/>
 	</bean>
 	
 	<bean id="announcement02" class="acme.entities.announcements.Announcement">
 		<property name="title" value="Sample announcement 02"/>
-		<property name="moment" value="2002/10/24 12:00"/>
+		<property name="moment" value="2019/12/31 12:00"/>
 		<property name="moreInfo" value="https://github.com"/>
 		<property name="text" value="This is the second description"/>
 	</bean>
 	
 	<bean id="announcement03" class="acme.entities.announcements.Announcement">
 		<property name="title" value="Sample announcement 03"/>
-		<property name="moment" value="2019/11/01 11:25"/>
+		<property name="moment" value="2020/01/05 11:25"/>
 		<property name="moreInfo" value="https://example.com"/>
 		<property name="text" value="This is the third description"/>
 	</bean>
 	
 	<bean id="announcement04" class="acme.entities.announcements.Announcement">
 		<property name="title" value="Sample announcement 04"/>
-		<property name="moment" value="2010/01/10 01:05"/>
+		<property name="moment" value="2020/01/06 01:05"/>
 		<property name="moreInfo"><null/></property>
 		<property name="text" value="This is the fourth description"/>
 	</bean> 
@@ -569,7 +569,7 @@
 	<bean class="acme.entities.requests.Request" id="request2">
 		<property value="RABCD-1235" name="ticker"/>
 		<property value="2018/01/06 11:00" name="creationMoment"/>
-		<property value="2020/01/06 11:00" name="deadline"/>
+		<property value="2020/08/06 11:00" name="deadline"/>
 		<property value="Maths Wanted!" name="title"/>
 		<property value="MASA needs new maths. Apply here" name="text"/>
 		<property name="reward">
@@ -677,7 +677,7 @@
 	<bean id="offer03" class="acme.entities.offers.Offer">
 	  	<property name="title" value="Data analyst"/>
 	  	<property name="creationMoment" value="2018/06/06 00:03"/>
-	  	<property name="limitDate" value="2020/06/11 22:00"/>
+	  	<property name="limitDate" value="2019/01/01 22:00"/>
 	  	<property name="descriptionText" value="Google need Data analysts"/>
 	  	<property name="minAmount" value="40000.00 €"/>
 	    <property name="maxAmount" value="45000.00 €"/>
@@ -750,7 +750,7 @@
 	
 	<bean class="acme.entities.challenges.Challenge" id="challenge2">
 		<property value="Maths Wanted!" name="title"/>
-		<property value="2020/02/05 11:25" name="deadline"/>
+		<property value="2025/02/05 11:25" name="deadline"/>
 		<property value="MASA needs new maths. Apply here" name="description"/>
 		<property value="Resolve gold math problem" name="goldGoal"/>
 		<property name="goldReward">
@@ -777,7 +777,7 @@
 	
 	<bean class="acme.entities.challenges.Challenge" id="challenge3">
 		<property value="Developers Wanted!" name="title"/>
-		<property value="2020/04/03 12:00" name="deadline"/>
+		<property value="2026/04/03 12:00" name="deadline"/>
 		<property value="MASA needs new developers. Apply here" name="description"/>
 		<property value="Create an app" name="goldGoal"/>
 		<property name="goldReward">
@@ -878,33 +878,33 @@
   
   <!-- Threads -->
 	 <bean class="acme.entities.threads.Thread" name="thread1">
-		<property value="questions and answers" name="title" />
+		<property value="questions and answers of thread1" name="title" />
 		<property value="2018/12/11 23:59" name="creationMoment" />
 		<property name="authenticated" ref="authenticated1Authenticated" />
 	</bean>  
 	
 	 <bean class="acme.entities.threads.Thread" name="thread2">
-		<property value="questions and answers" name="title" />
+		<property value="questions and answers of thread2" name="title" />
 		<property value="2018/12/11 23:59" name="creationMoment" />
 		<property name="authenticated" ref="authenticated1Authenticated" />
 	</bean>  
 	
 	 <bean class="acme.entities.threads.Thread" name="thread3">
-		<property value="questions and answers" name="title" />
+		<property value="questions and answers of thread3" name="title" />
 		<property value="2018/12/11 23:59" name="creationMoment" />
 		<property name="authenticated" ref="authenticated1Authenticated" />
 	</bean>  
 	
 	 <bean class="acme.entities.threads.Thread" name="thread4">
-		<property value="questions and answers" name="title" />
+		<property value="questions and answers of thread4" name="title" />
 		<property value="2018/12/11 23:59" name="creationMoment" />
-		<property name="authenticated" ref="authenticated1Authenticated" />
+		<property name="authenticated" ref="authenticated2Authenticated" />
 	</bean>  
   
 	 <bean class="acme.entities.threads.Thread" name="thread5">
-		<property value="questions and answers" name="title" />
+		<property value="questions and answers of thread5" name="title" />
 		<property value="2018/12/11 23:59" name="creationMoment" />
-		<property name="authenticated" ref="authenticated1Authenticated" />
+		<property name="authenticated" ref="authenticated2Authenticated" />
 	</bean>  
 
 	<!-- Message -->
@@ -921,8 +921,8 @@
 	 <bean class="acme.entities.messages.Message" name="messageHello2">
 		<property value="hello 2" name="title" />
 		<property value="2003/12/11 23:59" name="creationMoment" />
-		<property value="stranger, things, happen" name="tags" />
-		<property value="Lorem ipsum sit dolor amet." name="body" />
+		<property name="tags"><null/></property>
+		<property value="Lorem ipsum sit" name="body" />
 		<property name="thread"  ref="thread1"/> 
 		
 	</bean>
@@ -931,7 +931,7 @@
 		<property value="hello" name="title" />
 		<property value="2003/12/11 23:59" name="creationMoment" />
 		<property value="stranger, things, happen" name="tags" />
-		<property value="Lorem ipsum sit dolor amet." name="body" />
+		<property value="Maria ipsum sit dolor amet." name="body" />
 		<property name="thread"  ref="thread2"/> 
 		
 	</bean>
@@ -940,7 +940,7 @@
 		<property value="hello" name="title" />
 		<property value="2003/12/11 23:59" name="creationMoment" />
 		<property value="stranger, things, happen" name="tags" />
-		<property value="Lorem ipsum sit dolor amet." name="body" />
+		<property value="Siting out my body" name="body" />
 		<property name="thread"  ref="thread3"/> 
 		
 	</bean>
@@ -957,9 +957,9 @@
 	 <bean class="acme.entities.messages.Message" name="message5">
 		<property value="hello" name="title" />
 		<property value="2003/12/11 23:59" name="creationMoment" />
-		<property value="stranger, things, happen" name="tags" />
-		<property value="Lorem ipsum sit dolor amet." name="body" />
-		<property name="thread"  ref="thread5"/> 
+		<property name="tags"><null/></property>
+		<property value="Ipsum sit dolor." name="body" />
+		<property name="thread"  ref="thread4"/> 
 		
 	</bean>
 

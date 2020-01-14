@@ -20,6 +20,5 @@
 	<acme:form-textbox code="anonymous.investor.form.label.sector" path="sector" />
 	<acme:form-textarea code="anonymous.investor.form.label.investingStatement" path="investingStatement" />
 	<acme:form-textbox code="anonymous.investor.form.label.starsNumber" path="starsNumber" />
-	
 	<acme:form-return code="anonymous.investor.form.button.return" />
 </acme:form>

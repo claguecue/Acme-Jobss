@@ -444,13 +444,17 @@ Customization
     <coordinates>
       <x>1645</x>
       <y>672</y>
-      <w>385</w>
-      <h>49</h>
+      <w>273</w>
+      <h>84</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Banner&gt;&gt;
 CommercialBanner
 --
-+creditCardNumber: String{NotBlank,CreditCardNumber}</panel_attributes>
++ creditCardNumber: String{NotBlank,CreditCardNumber}
++ holderName: String{NotBlank}
++ expirationMonth: Integer{NotNull, min = 1, max = 12}
++ expirationYear: Integer{NotNull, min = 0, max = 9999}
++ cvv: Integer{NotNull, min = 0, max = 9999}</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -523,7 +527,8 @@ Application
 + status: String{Pattern(),NotNull}
 + statement: String{NotBlank}
 + skills: String{NotBlank}
-+ quialifications: String{NotBlank}</panel_attributes>
++ qualifications: String{NotBlank}
+- rejectJustification: String</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -626,37 +631,37 @@ Registed by  ^</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>560</x>
-      <y>637</y>
+      <y>630</y>
       <w>77</w>
-      <h>98</h>
+      <h>105</h>
     </coordinates>
     <panel_attributes>lt=x-&gt;
 m1=1..*
 m2=1
 Regarding  ^</panel_attributes>
-    <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;130.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>693</x>
+      <x>700</x>
       <y>546</y>
-      <w>147</w>
+      <w>140</w>
       <h>35</h>
     </coordinates>
     <panel_attributes>lt=x-&gt;
 m1=0..*
 m2=1
 &lt; Regarding</panel_attributes>
-    <additional_attributes>190.0;20.0;10.0;20.0</additional_attributes>
+    <additional_attributes>180.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
       <x>448</x>
       <y>497</y>
-      <w>252</w>
-      <h>147</h>
+      <w>259</w>
+      <h>140</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 Job
@@ -669,8 +674,7 @@ Job
 + salary : Money{NotNull,Valid}
 - moreInfo:String{URL}
 + description: String{NotBlank}
-+ finalMode : boolean
-+ descriptorDescription:String {NotBlank}</panel_attributes>
++ finalMode : boolean</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -818,7 +822,7 @@ Thread
       <x>1442</x>
       <y>308</y>
       <w>287</w>
-      <h>63</h>
+      <h>77</h>
     </coordinates>
     <panel_attributes>/&lt;&lt;Entity&gt;&gt;/
 Message
@@ -852,8 +856,8 @@ Involve  ^</panel_attributes>
       <h>49</h>
     </coordinates>
     <panel_attributes>lt=x-&gt;
-m1=0..*
-m2=1
+m1=1
+m2=1..*
 &lt; Created by</panel_attributes>
     <additional_attributes>260.0;10.0;10.0;40.0</additional_attributes>
   </element>

@@ -22,5 +22,11 @@
 	<acme:form-textarea code="sponsor.non-commercial-banner.form.label.slogan" path="slogan" />	
 	<acme:form-url code="sponsor.non-commercial-banner.form.label.jingle" path="jingle" placeholder="http://www.acme.com/audfile[.mp3|.wav|.ogg]"/>
 	
+	<acme:form-submit test="${command == 'show' }" code="sponsor.non-commercial-banner.form.button.update" action="/sponsor/non-commercial-banner/update"/>
+	<acme:form-submit test="${command == 'show' }" code="sponsor.non-commercial-banner.form.button.delete" action="/sponsor/non-commercial-banner/delete"/>
+	<acme:form-submit test="${command == 'create' }" code="sponsor.non-commercial-banner.form.button.create" action="/sponsor/non-commercial-banner/create"/> 
+	<acme:form-submit test="${command == 'update' }" code="sponsor.non-commercial-banner.form.button.update" action="/sponsor/non-commercial-banner/update"/>
+	<acme:form-submit test="${command == 'delete' }" code="sponsor.non-commercial-banner.form.button.delete" action="/sponsor/non-commercial-banner/delete"/>
+	
   	<acme:form-return code="sponsor.non-commercial-banner.form.button.return"/>
 </acme:form>

@@ -19,7 +19,10 @@ public class AuthenticatedAuditorRequestController extends AbstractController<Au
 	// Internal state ---------------------------------------------------------------------------
 
 	@Autowired
-	private AuthenticatedAuditorRequestCreateService createService;
+	private AuthenticatedAuditorRequestCreateService	createService;
+
+	@Autowired
+	private AuthenticatedAuditorRequestShowService		showService;
 
 
 	// Constructors -----------------------------------------------------------------------------
@@ -27,6 +30,7 @@ public class AuthenticatedAuditorRequestController extends AbstractController<Au
 	@PostConstruct
 	private void initialise() {
 		super.addBasicCommand(BasicCommand.CREATE, this.createService);
+		super.addBasicCommand(BasicCommand.SHOW, this.showService);
 	}
 
 }

@@ -39,10 +39,17 @@ public class AuditorJobShowService implements AbstractShowService<Auditor, Job> 
 
 		Collection<Duty> duties = this.repository.findDutyByJobId(entity.getId());
 		Collection<Audit> audits = this.repository.findAuditByJobId(entity.getId());
+		Boolean auditsByMe = false;
+		for (Audit aud : audits) {
+			if (aud.getAuditor().getId() == request.getPrincipal().getActiveRoleId()) {
+				auditsByMe = true;
+			}
+		}
 
 		request.unbind(entity, model, "id", "reference", "deadline", "title", "salary", "moreInfo", "description", "finalMode");
 		model.setAttribute("listDutyEmpty", duties.isEmpty());
 		model.setAttribute("listAuditEmpty", audits.isEmpty());
+		model.setAttribute("noAuditsByMe", !auditsByMe);
 
 	}
 

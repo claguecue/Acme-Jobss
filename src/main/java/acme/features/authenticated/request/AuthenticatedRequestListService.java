@@ -48,7 +48,7 @@ public class AuthenticatedRequestListService implements AbstractListService<Auth
 	public Collection<Request> findMany(final acme.framework.components.Request<Request> request) {
 		assert request != null;
 		Collection<Request> result;
-		result = this.repository.findMany();
+		result = this.repository.findManyActives();
 		return result;
 	}
 

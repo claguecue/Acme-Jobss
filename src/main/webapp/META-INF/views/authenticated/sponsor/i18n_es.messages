@@ -1,0 +1,8 @@
+authenticated.sponsor.form.label.organisationName = Nombre de la organización
+authenticated.sponsor.form.label.creditCard = Tarjeta de crédito
+
+authenticated.sponsor.form.button.create = Registrarse
+authenticated.sponsor.form.button.update = Actualizar
+authenticated.sponsor.form.button.return = Volver
+
+errors.rol.sponsor.creditCard.format = The number credit card is not valid = El número de tarjeta de crédito no es válidoS
