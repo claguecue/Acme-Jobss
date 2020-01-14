@@ -11,8 +11,9 @@
 		<acme:form-textbox code="worker.application.form.label.status" path="status" />
 	</jstl:if>
 	<acme:form-textbox code="worker.application.form.label.statement" path="statement" />
-	<acme:form-textbox code="worker.application.form.label.skills" path="skills" />
-	<acme:form-textarea code="worker.application.form.label.qualifications" path="qualifications" />
+	
+	<acme:form-textbox code="worker.application.form.label.skills" path="skills" readonly="true" />
+	<acme:form-textarea code="worker.application.form.label.qualifications" path="qualifications" readonly="true" />
 		
 	
 	<acme:form-submit test="${command == 'create'}" code="worker.application.form-buttom.create" action="/worker/application/create"/>

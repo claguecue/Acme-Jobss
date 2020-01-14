@@ -58,19 +58,27 @@ public class WorkerApplicationCreateService implements AbstractCreateService<Wor
 		Application result;
 		Principal principal;
 
-		int accountId, idJob;
+		//		int accountId, idJob;
+
+		int idJob;
 		principal = request.getPrincipal();
-		accountId = principal.getActiveRoleId();
+		//		accountId = principal.getActiveRoleId();
 		idJob = request.getModel().getInteger("id");
 		result = new Application();
 
 		Date moment;
 		moment = new Date(System.currentTimeMillis() - 1);
+		int workerId = principal.getAccountId();//
+		Worker worker = this.repository.findOneWorkerByUserAccountId(workerId);//
+		String qualifications = worker.getQualifications();//
+		String skills = worker.getSkills();//
 		result.setCreationMoment(moment);
 		result.setStatus(ApplicationStatus.PENDING);
-		result.setWorker(this.repository.findOneWorkerById(accountId));
+		//		result.setWorker(this.repository.findOneWorkerById(accountId));
+		result.setWorker(worker);
 		result.setJob(this.repository.findOneJobById(idJob));
-
+		result.setSkills(skills);
+		result.setQualifications(qualifications);
 		return result;
 	}
 
