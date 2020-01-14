@@ -806,40 +806,13 @@
 	
 		<!--Banners-->
 		
-		<bean class="acme.entities.banners.Banner" id="banner1">
-		<property value="https://i.imgur.com/MtBRoNP.png" name="picture"/>
-		<property value="The spark of life" name="slogan"/>
-		<property value="https://www.meccacola.com/" name="targetURL"/>
-		</bean>
 		
-		<bean class="acme.entities.banners.Banner" id="banner2">
-		<property value="https://i.imgur.com/fihihcF.png" name="picture"/>
-		<property value="The spark of life" name="slogan"/>
-		<property value="https://www.meccacola.com/" name="targetURL"/>
-		</bean>
-		
-		<bean class="acme.entities.banners.Banner" id="banner3">
-		<property value="https://i.imgur.com/2eVF1HG.png" name="picture"/>
-		<property value="The spark of life" name="slogan"/>
-		<property value="https://www.meccacola.com/" name="targetURL"/>
-		</bean>
-		
-		<bean class="acme.entities.banners.Banner" id="banner4">
-		<property value="https://i.imgur.com/NGLSjk6.png" name="picture"/>
-		<property value="The spark of life" name="slogan"/>
-		<property value="https://www.meccacola.com/" name="targetURL"/>
-		</bean>
-		
-		<bean class="acme.entities.banners.Banner" id="banner5">
-		<property value="https://i.imgur.com/8YcXhS0.png" name="picture"/>
-		<property value="The spark of life" name="slogan"/>
-		<property value="https://www.meccacola.com/" name="targetURL"/>
-		</bean>
+	
 		
 	<!-- CommercialBanners -->
 	
 	<bean class="acme.entities.banners.CommercialBanner" id="cBanner1">
-		<property value="https://img.meccacola.com/banner1.jpg" name="picture"/>
+		<property value="https://i.imgur.com/8YcXhS0.png" name="picture"/>
 		<property value="The spark of life" name="slogan"/>
 		<property value="https://www.meccacola.com/" name="targetURL"/>
 		<property value="6432109876543210" name="creditCardNumber"/>
@@ -851,7 +824,7 @@
 	</bean>
 	
 	<bean class="acme.entities.banners.CommercialBanner" id="cBanner2">
-		<property value="https://img.personcola.com/banner1.jpg" name="picture"/>
+		<property value="https://i.imgur.com/NGLSjk6.png" name="picture"/>
 		<property value="The person of life" name="slogan"/>
 		<property value="https://www.personcola.com/" name="targetURL"/>
 		<property value="6432109876543210" name="creditCardNumber"/>
@@ -863,7 +836,7 @@
 	</bean>
 	
 	<bean class="acme.entities.banners.CommercialBanner" id="cBanner3">
-		<property value="https://img.fantum.com/banner1.jpg" name="picture"/>
+		<property value="https://i.imgur.com/2eVF1HG.png" name="picture"/>
 		<property value="The fantum of life" name="slogan"/>
 		<property value="https://www.fantum.com/" name="targetURL"/>
 		<property value="6432109876543210" name="creditCardNumber"/>
