@@ -806,6 +806,36 @@
 	
 		<!--Banners-->
 		
+		<bean class="acme.entities.banners.Banner" id="banner1">
+		<property value="https://i.imgur.com/MtBRoNP.png" name="picture"/>
+		<property value="The spark of life" name="slogan"/>
+		<property value="https://www.meccacola.com/" name="targetURL"/>
+		</bean>
+		
+		<bean class="acme.entities.banners.Banner" id="banner2">
+		<property value="https://i.imgur.com/fihihcF.png" name="picture"/>
+		<property value="The spark of life" name="slogan"/>
+		<property value="https://www.meccacola.com/" name="targetURL"/>
+		</bean>
+		
+		<bean class="acme.entities.banners.Banner" id="banner3">
+		<property value="https://i.imgur.com/2eVF1HG.png" name="picture"/>
+		<property value="The spark of life" name="slogan"/>
+		<property value="https://www.meccacola.com/" name="targetURL"/>
+		</bean>
+		
+		<bean class="acme.entities.banners.Banner" id="banner4">
+		<property value="https://i.imgur.com/NGLSjk6.png" name="picture"/>
+		<property value="The spark of life" name="slogan"/>
+		<property value="https://www.meccacola.com/" name="targetURL"/>
+		</bean>
+		
+		<bean class="acme.entities.banners.Banner" id="banner5">
+		<property value="https://i.imgur.com/8YcXhS0.png" name="picture"/>
+		<property value="The spark of life" name="slogan"/>
+		<property value="https://www.meccacola.com/" name="targetURL"/>
+		</bean>
+		
 	<!-- CommercialBanners -->
 	
 	<bean class="acme.entities.banners.CommercialBanner" id="cBanner1">
@@ -851,7 +881,8 @@
 	<!-- NonCommercialBanners -->
 	
   	<bean class="acme.entities.banners.NonCommercialBanner" id="noncBanner1">
-		<property value="https://img.meccacola.com/banner1.jpg" name="picture"/>
+		<!-- <property value="https://img.meccacola.com/banner1.jpg" name="picture"/> -->
+		<property value="https://i.imgur.com/8YcXhS0.png" name="picture"/>
 		<property value="The spark of life" name="slogan"/>
 		<property value="https://www.meccacola.com/" name="targetURL"/>
 		<property value="https://www.meccacola.com/jingle.mp3" name="jingle"/>
@@ -859,7 +890,8 @@
 	</bean>
 	
 	 <bean class="acme.entities.banners.NonCommercialBanner" id="noncBanner2">
-		<property value="https://img.personcola.com/banner1.jpg" name="picture"/>
+	<!-- 	<property value="https://img.personcola.com/banner1.jpg" name="picture"/> -->
+		<property value="https://i.imgur.com/NGLSjk6.png" name="picture"/>
 		<property value="The person of life" name="slogan"/>
 		<property value="https://www.personcola.com/" name="targetURL"/>
 		<property value="https://www.personcola.com/jingle.mp3" name="jingle"/>
@@ -867,13 +899,22 @@
 	</bean>
 	
   	 <bean class="acme.entities.banners.NonCommercialBanner" id="noncBanner3">
-		<property value="https://img.fantum.com/banner1.jpg" name="picture"/>
+<!-- 		<property value="https://img.fantum.com/banner1.jpg" name="picture"/> -->
+		<property value="https://i.imgur.com/2eVF1HG.png" name="picture"/>
 		<property value="The fantum of life" name="slogan"/>
 		<property value="https://www.fantum.com/" name="targetURL"/>
 		<property value="https://www.fantum.com/jingle.mp3" name="jingle"/>
 		<property name="sponsor" ref="sponsor2Sponsor"/>
 	</bean>
 
+  	 <bean class="acme.entities.banners.NonCommercialBanner" id="noncBanner4">
+<!-- 		<property value="https://img.fantum.com/banner1.jpg" name="picture"/> -->
+		<property value="https://i.imgur.com/MtBRoNP.png" name="picture"/>
+		<property value="The fantum of life" name="slogan"/>
+		<property value="https://www.fantum.com/" name="targetURL"/>
+		<property value="https://www.fantum.com/jingle.mp3" name="jingle"/>
+		<property name="sponsor" ref="sponsor2Sponsor"/>
+	</bean>
   
   
   <!-- Threads -->
