@@ -3,3 +3,60 @@ ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP POST /acme-jo
 ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
 ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:335): Object of class [acme.entities.roles.Consumer] with identifier [1298]: optimistic locking failed; nested exception is org.hibernate.StaleObjectStateException: Row was updated or deleted by another transaction (or unsaved-value mapping was incorrect) : [acme.entities.roles.Consumer#1298]
 org.hibernate.persister.entity.AbstractEntityPersister.check(AbstractEntityPersister.java:2527): Row was updated or deleted by another transaction (or unsaved-value mapping was incorrect) : [acme.entities.roles.Consumer#1298]
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/acme-jobs].[jsp]] at org.apache.jasper.compiler.DefaultErrorHandler.jspError(DefaultErrorHandler.java:42): /WEB-INF/tags/form-phone.tag (line: [12], column: [1]) [${MessageHelper. â¤¦
+getMessage('default.placeholder.phone')}] contains invalid expression(s): [javax.el.ELException: Failed to parse the expression [${MessageHelper. â¤¦
+getMessage('default.placeholder.phone')}]]
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/acme-jobs].[jsp]] at org.apache.tiles.request.servlet.ServletUtil.wrapServletException(ServletUtil.java:63): JSPException including path '../authenticated/user-account/form.jsp'.
+at org.apache.jasper.compiler.DefaultErrorHandler.jspError(DefaultErrorHandler.java:42): /WEB-INF/tags/form-phone.tag (line: [12], column: [1]) [${MessageHelper. â¤¦
+getMessage('default.placeholder.phone')}] contains invalid expression(s): [javax.el.ELException: Failed to parse the expression [${MessageHelper. â¤¦
+getMessage('default.placeholder.phone')}]]
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/acme-jobs].[dispatcherServlet]] at org.apache.jasper.compiler.DefaultErrorHandler.jspError(DefaultErrorHandler.java:42): /WEB-INF/tags/form-phone.tag (line: [12], column: [1]) [${MessageHelper. â¤¦
+getMessage('default.placeholder.phone')}] contains invalid expression(s): [javax.el.ELException: Failed to parse the expression [${MessageHelper. â¤¦
+getMessage('default.placeholder.phone')}]]
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-jobs/master/panic HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1013): Request processing failed; nested exception is org.apache.tiles.request.render.CannotRenderException: JSPException including path '../authenticated/user-account/form.jsp'.
+org.apache.tiles.impl.BasicTilesContainer.render(BasicTilesContainer.java:399): JSPException including path '../authenticated/user-account/form.jsp'.
+org.apache.tiles.request.servlet.ServletUtil.wrapServletException(ServletUtil.java:63): JSPException including path '../authenticated/user-account/form.jsp'.
+org.apache.jasper.compiler.DefaultErrorHandler.jspError(DefaultErrorHandler.java:42): /WEB-INF/tags/form-phone.tag (line: [12], column: [1]) [${MessageHelper. â¤¦
+getMessage('default.placeholder.phone')}] contains invalid expression(s): [javax.el.ELException: Failed to parse the expression [${MessageHelper. â¤¦
+getMessage('default.placeholder.phone')}]]
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP POST /acme-jobs/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: org.hibernate.validator.internal.engine.constraintvalidation.ConstraintValidatorManager.initializeValidator(ConstraintValidatorManager.java:276): HV000032: Unable to initialize org.hibernate.validator.internal.constraintvalidators.bv.PatternValidator.
+org.hibernate.validator.internal.constraintvalidators.bv.PatternValidator.initialize(PatternValidator.java:43): HV000022: Invalid regular expression.
+java.util.regex.Pattern.error(Unknown Source): Unclosed group near index 25
+\d{1,9}([\s-]\d{1,9}{0,5}
+WARN [com.zaxxer.hikari.pool.HikariPool] {} - Thread starvation or clock leap detected (housekeeper delta={}).
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP POST /acme-jobs/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.handleNoMatch(RequestMappingInfoHandlerMapping.java:200): Request method 'POST' not supported
+ERROR [org.hibernate.internal.ExceptionMapperStandardImpl] HHH000346: Error during managed flush [Session/EntityManager is closed]
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP POST /acme-jobs/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: org.springframework.orm.jpa.EntityManagerFactoryUtils.convertJpaAccessExceptionIfPossible(EntityManagerFactoryUtils.java:370): Session/EntityManager is closed; nested exception is java.lang.IllegalStateException: Session/EntityManager is closed
+org.hibernate.internal.AbstractSharedSessionContract.checkOpen(AbstractSharedSessionContract.java:360): Session/EntityManager is closed
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-jobs/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:40): Access is not authorised
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-jobs/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:40): Access is not authorised
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-jobs/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:40): Access is not authorised
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-jobs/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:40): Access is not authorised
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-jobs/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:40): Access is not authorised
+ERROR [org.apache.catalina.util.LifecycleBase] at org.apache.catalina.connector.Connector.startInternal(Connector.java:1008): Protocol handler start failed
+at sun.nio.ch.Net.bind0(Native Method): Address already in use: bind
+ERROR [org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter] ***************************
+APPLICATION FAILED TO START
+***************************
+Description:
+The Tomcat connector configured to listen on port 8080 failed to start. The port may already be in use or the connector may be misconfigured.
+Action:
+Verify the connector's configuration, identify and stop any process that's listening on port 8080, or configure this application to listen on another port.
