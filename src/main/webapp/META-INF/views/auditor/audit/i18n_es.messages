@@ -9,7 +9,7 @@
 # they accept any liabilities with respect to them.
 
 auditor.audit.form.label.title = Título
-auditor.audit.form.label.status = Estado
+auditor.audit.form.label.status = Modo Final
 auditor.audit.form.label.creationMoment = Momento de creación
 auditor.audit.form.label.body = Cuerpo
 
