@@ -6,6 +6,7 @@ administrator.investor.form.button.return = Return
 
 administrator.investor.list.label.investorName = Investor Name
 administrator.investor.list.label.sector = Sector
+administrator.investor.list.label.starsNumber = Stars
 
 
 administrator.investor.form.button.update = Update
