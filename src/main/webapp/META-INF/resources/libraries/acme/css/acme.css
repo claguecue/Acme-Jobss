@@ -119,3 +119,11 @@ table.dataTable tbody tr.selected {
 		text-align: right;
 	}
 }
+
+.img-fluid.rounded{
+    
+  width: 75%;
+  display: block;
+  margin: auto;
+    
+}
