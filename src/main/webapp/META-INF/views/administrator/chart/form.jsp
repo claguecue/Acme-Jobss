@@ -53,6 +53,7 @@ $(document).ready(function() {
 	var canvas, context;
 	
 	canvas = document.getElementById("canvas1");
+	canvas.height = 55;
 	context = canvas.getContext("2d");
 	new Chart(context, {
 		type : "bar", 
@@ -113,6 +114,7 @@ $(document).ready(function() {
 	var canvas, context;
 	
 	canvas = document.getElementById("canvas2");
+	canvas.height = 55;
 	context = canvas.getContext("2d");
 	new Chart(context, {
 		type : "bar", 
@@ -171,6 +173,7 @@ $(document).ready(function() {
 	var canvas, context;
 	
 	canvas = document.getElementById("canvas3");
+	canvas.height = 55;
 	context = canvas.getContext("2d");
 	new Chart(context, {
 		type : "bar", 
@@ -230,6 +233,7 @@ $(document).ready(function() {
 	var canvas, context;
 	
 	canvas = document.getElementById("canvas4");
+	canvas.height = 55
 	context = canvas.getContext("2d");
 	new Chart(context, {
 		type : "bar", 
