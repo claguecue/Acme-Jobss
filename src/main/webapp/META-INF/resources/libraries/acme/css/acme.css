@@ -119,3 +119,25 @@ table.dataTable tbody tr.selected {
 		text-align: right;
 	}
 }
+
+/* header logo  */
+
+.img-fluid.rounded{
+    
+  width: 75%;
+  display: block;
+  margin: auto;
+    
+}
+
+/* footer logo */
+
+.colalign-middle .img-fluid {
+    display: block;
+    margin: auto;
+    margin-top:3%;
+}
+
+.colalign-middle div {
+    text-align: center;
+}
