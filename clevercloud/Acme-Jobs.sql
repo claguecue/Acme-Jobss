@@ -16,40 +16,6 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `_request`
---
-
-DROP TABLE IF EXISTS `_request`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `_request` (
-  `id` int(11) NOT NULL,
-  `version` int(11) NOT NULL,
-  `deadline` datetime(6) DEFAULT NULL,
-  `moment` datetime(6) DEFAULT NULL,
-  `reward_amount` double DEFAULT NULL,
-  `reward_currency` varchar(255) DEFAULT NULL,
-  `text` varchar(255) DEFAULT NULL,
-  `ticker` varchar(255) DEFAULT NULL,
-  `title` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `UK_cojbnsth7eki2kphtwc27slb5` (`ticker`),
-  KEY `IDX6chpf38fstvkblv6t12t0qs91` (`deadline`),
-  KEY `IDXq82g0jb2mlplkxoma94rvovh8` (`ticker`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `_request`
---
-
-LOCK TABLES `_request` WRITE;
-/*!40000 ALTER TABLE `_request` DISABLE KEYS */;
-INSERT INTO `_request` VALUES (50,0,'2021-09-09 08:00:00.000000','2019-09-09 08:00:00.000000',1000,'EUR','Want some money?','RABCD-12345','Job Request 001'),(51,0,'2022-09-09 08:00:00.000000','2019-09-09 08:00:00.000000',1000000,'EUR','Want EVEN more money?','RABCD-12340','Job Request 002'),(52,0,'2018-09-09 08:00:00.000000','2017-05-09 08:00:00.000000',100,'EUR','I\'m invisible, spooky huh?','RABCD-12349','Job Request 003'),(53,0,'2018-09-09 08:00:00.000000','2017-05-09 08:00:00.000000',100,'EUR','I\'m invisible, spooky huh?','RZZZZ-99999','Job Request 004'),(54,0,'2018-09-09 08:00:00.000000','2017-05-09 08:00:00.000000',100,'EUR','I\'m invisible, spooky huh?','RGKDP-76567','Job Request 005');
-/*!40000 ALTER TABLE `_request` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `acme_request`
 --
 
@@ -233,41 +199,6 @@ LOCK TABLES `audit` WRITE;
 UNLOCK TABLES;
 
 --
--- Table structure for table `audit_record`
---
-
-DROP TABLE IF EXISTS `audit_record`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `audit_record` (
-  `id` int(11) NOT NULL,
-  `version` int(11) NOT NULL,
-  `body` varchar(1024) DEFAULT NULL,
-  `creation_moment` datetime(6) DEFAULT NULL,
-  `status` bit(1) NOT NULL,
-  `title` varchar(255) DEFAULT NULL,
-  `auditor_id` int(11) NOT NULL,
-  `job_id` int(11) NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `IDXof878cqun8l1ynh0ao94bw3au` (`status`),
-  KEY `FKdcrrgv6rkfw2ruvdja56un4ji` (`auditor_id`),
-  KEY `FKlbvbyimxf6pxvbhkdd4vfhlnd` (`job_id`),
-  CONSTRAINT `FKdcrrgv6rkfw2ruvdja56un4ji` FOREIGN KEY (`auditor_id`) REFERENCES `auditor` (`id`),
-  CONSTRAINT `FKlbvbyimxf6pxvbhkdd4vfhlnd` FOREIGN KEY (`job_id`) REFERENCES `job` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `audit_record`
---
-
-LOCK TABLES `audit_record` WRITE;
-/*!40000 ALTER TABLE `audit_record` DISABLE KEYS */;
-INSERT INTO `audit_record` VALUES (117,0,'A great job!','2019-11-11 09:00:00.000000',_binary '','Audit Record 1',112,100),(118,0,'A great job! Keep up.','2019-11-10 09:00:00.000000',_binary '\0','Audit Record 2',115,100),(119,0,'A terrible job!','2019-10-10 08:00:00.000000',_binary '','Audit Record 3',115,107),(120,0,'I don\'t know what to comment on that.','2019-09-10 08:00:00.000000',_binary '\0','Audit Record 4',115,109),(121,0,'Really?!','2019-08-10 08:00:00.000000',_binary '','Audit Record 5',112,107);
-/*!40000 ALTER TABLE `audit_record` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `auditor`
 --
 
@@ -352,34 +283,6 @@ INSERT INTO `authenticated` VALUES (5,0,3);
 UNLOCK TABLES;
 
 --
--- Table structure for table `authorized`
---
-
-DROP TABLE IF EXISTS `authorized`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `authorized` (
-  `id` int(11) NOT NULL,
-  `version` int(11) NOT NULL,
-  `user_account_id` int(11) DEFAULT NULL,
-  `accepted` bit(1) NOT NULL,
-  `body` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `FK_keqakltjauwrbk13pgunccany` (`user_account_id`),
-  CONSTRAINT `FK_keqakltjauwrbk13pgunccany` FOREIGN KEY (`user_account_id`) REFERENCES `user_account` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `authorized`
---
-
-LOCK TABLES `authorized` WRITE;
-/*!40000 ALTER TABLE `authorized` DISABLE KEYS */;
-/*!40000 ALTER TABLE `authorized` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `banner`
 --
 
@@ -441,38 +344,6 @@ LOCK TABLES `challenge` WRITE;
 UNLOCK TABLES;
 
 --
--- Table structure for table `comercial_banner`
---
-
-DROP TABLE IF EXISTS `comercial_banner`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `comercial_banner` (
-  `id` int(11) NOT NULL,
-  `version` int(11) NOT NULL,
-  `slogan` varchar(255) DEFAULT NULL,
-  `target` varchar(255) DEFAULT NULL,
-  `sponsor_id` int(11) DEFAULT NULL,
-  `credit_card_id` int(11) NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `FK8w7maugu1j4ohgbwjbgfatkru` (`credit_card_id`),
-  KEY `FK_2uqsobmmc3lje3k58op7dsyvw` (`sponsor_id`),
-  CONSTRAINT `FK8w7maugu1j4ohgbwjbgfatkru` FOREIGN KEY (`credit_card_id`) REFERENCES `credit_card` (`id`),
-  CONSTRAINT `FK_2uqsobmmc3lje3k58op7dsyvw` FOREIGN KEY (`sponsor_id`) REFERENCES `sponsor` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `comercial_banner`
---
-
-LOCK TABLES `comercial_banner` WRITE;
-/*!40000 ALTER TABLE `comercial_banner` DISABLE KEYS */;
-INSERT INTO `comercial_banner` VALUES (83,0,'Banner test 01','https://drive.google.com/file/d/1GLE9rD9Rlt4iMz2ywFs5EEtbg_rjTuEm/view?usp=sharing',76,81),(84,0,'Banner test 02','https://drive.google.com/file/d/1GLE9rD9Rlt4iMz2ywFs5EEtbg_rjTuEm/view?usp=sharing',76,81),(85,0,'Banner test 03','https://drive.google.com/file/d/1GLE9rD9Rlt4iMz2ywFs5EEtbg_rjTuEm/view?usp=sharing',76,81),(86,0,'Banner test 04','https://drive.google.com/file/d/1GLE9rD9Rlt4iMz2ywFs5EEtbg_rjTuEm/view?usp=sharing',76,81),(87,0,'Banner test 05','https://drive.google.com/file/d/1GLE9rD9Rlt4iMz2ywFs5EEtbg_rjTuEm/view?usp=sharing',76,81);
-/*!40000 ALTER TABLE `comercial_banner` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `commercial_banner`
 --
 
@@ -504,41 +375,6 @@ CREATE TABLE `commercial_banner` (
 LOCK TABLES `commercial_banner` WRITE;
 /*!40000 ALTER TABLE `commercial_banner` DISABLE KEYS */;
 /*!40000 ALTER TABLE `commercial_banner` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `company`
---
-
-DROP TABLE IF EXISTS `company`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `company` (
-  `id` int(11) NOT NULL,
-  `version` int(11) NOT NULL,
-  `activities` varchar(255) DEFAULT NULL,
-  `ceo` varchar(255) DEFAULT NULL,
-  `email` varchar(255) DEFAULT NULL,
-  `incorporated` bit(1) DEFAULT NULL,
-  `name` varchar(255) DEFAULT NULL,
-  `phone` varchar(255) DEFAULT NULL,
-  `sector` varchar(255) DEFAULT NULL,
-  `stars` double DEFAULT NULL,
-  `url` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `IDX3vwg77973akwy9ilnfq707yt1` (`stars`),
-  KEY `IDXbm7mwffwxwiukjmbmt9t1qnnu` (`sector`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `company`
---
-
-LOCK TABLES `company` WRITE;
-/*!40000 ALTER TABLE `company` DISABLE KEYS */;
-INSERT INTO `company` VALUES (109,0,'Activity1','Ceo1','email1@email.com',_binary '','Name1 Inc','+123 987654321','Aerospace',4.6,'https://www.site1.com/'),(110,0,'Activity2','Ceo2','email2@email.com',_binary '','Name2 Inc','+123 (1234) 6543212','Food',2.1,'https://www.site2.com/'),(111,0,'Activity3','Ceo3','email3@email.com',_binary '\0','Name3 LLC','+123 (1234) 6543212','Food',NULL,'https://www.site3.com/'),(112,0,'Activity4','Ceo4','email4@email.com',_binary '\0','Name4 LLC','+123 (0) 9876543210','Food',5,'https://www.site4.com/'),(113,0,'Activity5','Ceo4','email5@email.com',_binary '','Name5 Inc','+123 (0) 9876543210','Software',5,'https://www.site5.com/'),(114,0,'Activity6','Ceo6','email6@email.com',_binary '','Name6 Inc','+12 (25) 987654301','Automotive',4.2,'https://www.site6.com/'),(115,0,'Activity7','Ceo7','email6@email.com',_binary '\0','Name7 LLC','+12 (25) 987654301','Automotive',4.2,'https://www.site6.com/');
-/*!40000 ALTER TABLE `company` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -574,32 +410,6 @@ LOCK TABLES `company_record` WRITE;
 UNLOCK TABLES;
 
 --
--- Table structure for table `configuration`
---
-
-DROP TABLE IF EXISTS `configuration`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `configuration` (
-  `id` int(11) NOT NULL,
-  `version` int(11) NOT NULL,
-  `spam_threshold` double DEFAULT NULL,
-  `spam_words` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `configuration`
---
-
-LOCK TABLES `configuration` WRITE;
-/*!40000 ALTER TABLE `configuration` DISABLE KEYS */;
-INSERT INTO `configuration` VALUES (1356,0,1,' viagra, sex,     cialis, hard_core, cialis, nigeria, you’ve won, million dollar,      millon de dolares, has ganado, explícito, sexo');
-/*!40000 ALTER TABLE `configuration` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `consumer`
 --
 
@@ -628,37 +438,6 @@ LOCK TABLES `consumer` WRITE;
 UNLOCK TABLES;
 
 --
--- Table structure for table `credit_card`
---
-
-DROP TABLE IF EXISTS `credit_card`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `credit_card` (
-  `id` int(11) NOT NULL,
-  `version` int(11) NOT NULL,
-  `brand` varchar(255) DEFAULT NULL,
-  `credit_card_number` varchar(255) DEFAULT NULL,
-  `expiration_date` varchar(255) DEFAULT NULL,
-  `holder` varchar(255) DEFAULT NULL,
-  `sponsor_id` int(11) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `FK31l5hvh7p1nx1aw6v649gw3rc` (`sponsor_id`),
-  CONSTRAINT `FK31l5hvh7p1nx1aw6v649gw3rc` FOREIGN KEY (`sponsor_id`) REFERENCES `sponsor` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `credit_card`
---
-
-LOCK TABLES `credit_card` WRITE;
-/*!40000 ALTER TABLE `credit_card` DISABLE KEYS */;
-INSERT INTO `credit_card` VALUES (81,0,'VISA','4617307392039794','10/2050','Person01',76),(82,0,'MasterCard','4252347521322919','10/2050','Person02',NULL);
-/*!40000 ALTER TABLE `credit_card` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `customization`
 --
 
@@ -684,6 +463,30 @@ LOCK TABLES `customization` WRITE;
 /*!40000 ALTER TABLE `customization` DISABLE KEYS */;
 INSERT INTO `customization` VALUES (6,0,1,1,'sex, sexo, cialis, nigeria, hard core, duro, you\'ve won, ha ganado, million dollar, millón de dólares');
 /*!40000 ALTER TABLE `customization` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `descriptor`
+--
+
+DROP TABLE IF EXISTS `descriptor`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `descriptor` (
+  `id` int(11) NOT NULL,
+  `version` int(11) NOT NULL,
+  `description` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `descriptor`
+--
+
+LOCK TABLES `descriptor` WRITE;
+/*!40000 ALTER TABLE `descriptor` DISABLE KEYS */;
+/*!40000 ALTER TABLE `descriptor` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -741,6 +544,116 @@ CREATE TABLE `employer` (
 LOCK TABLES `employer` WRITE;
 /*!40000 ALTER TABLE `employer` DISABLE KEYS */;
 /*!40000 ALTER TABLE `employer` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `esquen_bulletin`
+--
+
+DROP TABLE IF EXISTS `esquen_bulletin`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `esquen_bulletin` (
+  `id` int(11) NOT NULL,
+  `version` int(11) NOT NULL,
+  `apellidos` varchar(255) DEFAULT NULL,
+  `fecha_nacimiento` datetime(6) DEFAULT NULL,
+  `nombre` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `esquen_bulletin`
+--
+
+LOCK TABLES `esquen_bulletin` WRITE;
+/*!40000 ALTER TABLE `esquen_bulletin` DISABLE KEYS */;
+INSERT INTO `esquen_bulletin` VALUES (12,0,'Villanueva Lira','2000-04-03 08:00:00.000000','Maria'),(13,0,'Soliz Esquen','1989-08-06 08:00:00.000000','Irene'),(14,0,'Rojas Gil','1996-03-07 09:00:00.000000','Jorge');
+/*!40000 ALTER TABLE `esquen_bulletin` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `fust`
+--
+
+DROP TABLE IF EXISTS `fust`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `fust` (
+  `id` int(11) NOT NULL,
+  `version` int(11) NOT NULL,
+  `tagging` varchar(255) DEFAULT NULL,
+  `text` varchar(255) DEFAULT NULL,
+  `job_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FK78mr9bv69o7f60mjm7ikmqjya` (`job_id`),
+  CONSTRAINT `FK78mr9bv69o7f60mjm7ikmqjya` FOREIGN KEY (`job_id`) REFERENCES `job` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `fust`
+--
+
+LOCK TABLES `fust` WRITE;
+/*!40000 ALTER TABLE `fust` DISABLE KEYS */;
+/*!40000 ALTER TABLE `fust` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `gonzalez_bulletin`
+--
+
+DROP TABLE IF EXISTS `gonzalez_bulletin`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `gonzalez_bulletin` (
+  `id` int(11) NOT NULL,
+  `version` int(11) NOT NULL,
+  `author` varchar(255) DEFAULT NULL,
+  `city` varchar(255) DEFAULT NULL,
+  `moment` datetime(6) DEFAULT NULL,
+  `street` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `gonzalez_bulletin`
+--
+
+LOCK TABLES `gonzalez_bulletin` WRITE;
+/*!40000 ALTER TABLE `gonzalez_bulletin` DISABLE KEYS */;
+INSERT INTO `gonzalez_bulletin` VALUES (9,0,'Antonio Caballo','Albacete','2019-08-05 10:00:00.000000','Calle Vicente Alba'),(10,0,'Pablo Alonso','Cuenca','2019-09-10 19:00:00.000000','Avenida Extremadura'),(11,0,'Margarita Flores','Toledo','2019-10-10 13:00:00.000000','Calle Alfonso Muñoz');
+/*!40000 ALTER TABLE `gonzalez_bulletin` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `guerrero_bulletin`
+--
+
+DROP TABLE IF EXISTS `guerrero_bulletin`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `guerrero_bulletin` (
+  `id` int(11) NOT NULL,
+  `version` int(11) NOT NULL,
+  `expiration_date` datetime(6) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `quantity` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `guerrero_bulletin`
+--
+
+LOCK TABLES `guerrero_bulletin` WRITE;
+/*!40000 ALTER TABLE `guerrero_bulletin` DISABLE KEYS */;
+INSERT INTO `guerrero_bulletin` VALUES (15,0,'2020-03-04 23:00:00.000000','Galletas El príncipe',5),(16,0,'2020-10-24 13:00:00.000000','Galletas con chocolate',7),(17,0,'2020-06-15 12:30:00.000000','Galletas cremosas',1);
+/*!40000 ALTER TABLE `guerrero_bulletin` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -802,12 +715,11 @@ DROP TABLE IF EXISTS `investor_record`;
 CREATE TABLE `investor_record` (
   `id` int(11) NOT NULL,
   `version` int(11) NOT NULL,
-  `name` varchar(255) DEFAULT NULL,
+  `investing_statement` varchar(255) DEFAULT NULL,
+  `investor_name` varchar(255) DEFAULT NULL,
   `sector` varchar(255) DEFAULT NULL,
-  `stars` int(11) DEFAULT NULL,
   `text` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `IDXk2t3uthe649ao1jllcuks0gv4` (`stars`)
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -817,7 +729,7 @@ CREATE TABLE `investor_record` (
 
 LOCK TABLES `investor_record` WRITE;
 /*!40000 ALTER TABLE `investor_record` DISABLE KEYS */;
-INSERT INTO `investor_record` VALUES (65,0,'Investor 001','Sample Sector',NULL,'Sample text'),(66,0,'Investor 002','Another Sample Sector',5,'Another Sample text'),(67,0,'Investor 003','The very best sector',0,'Worst text ever!'),(68,0,'Investor 004','The worst sector',NULL,'Stars null:('),(69,0,'Investor 005','The best sector',3,'Best text ever!');
+INSERT INTO `investor_record` VALUES (6,0,'1000 €','Alberto Socorro','Financiero','This is the description of a sample announcement'),(7,0,'2000 €','Laura Gallardo','Salud','This is the description of another announcement'),(8,0,'3000 €','Jorge Muñoz','Industrial','This is a very old announcement');
 /*!40000 ALTER TABLE `investor_record` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -857,6 +769,33 @@ LOCK TABLES `job` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `lucas_bulletin`
+--
+
+DROP TABLE IF EXISTS `lucas_bulletin`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `lucas_bulletin` (
+  `id` int(11) NOT NULL,
+  `version` int(11) NOT NULL,
+  `age` int(11) DEFAULT NULL,
+  `dni` varchar(255) DEFAULT NULL,
+  `occupation` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `lucas_bulletin`
+--
+
+LOCK TABLES `lucas_bulletin` WRITE;
+/*!40000 ALTER TABLE `lucas_bulletin` DISABLE KEYS */;
+INSERT INTO `lucas_bulletin` VALUES (18,0,19,'12345678Z','Software Developer'),(19,0,20,'12345679Z','IT security specialist'),(20,0,28,'14346779M','Senior Web Developer');
+/*!40000 ALTER TABLE `lucas_bulletin` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `message`
 --
 
@@ -884,62 +823,6 @@ CREATE TABLE `message` (
 LOCK TABLES `message` WRITE;
 /*!40000 ALTER TABLE `message` DISABLE KEYS */;
 /*!40000 ALTER TABLE `message` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `message_thread`
---
-
-DROP TABLE IF EXISTS `message_thread`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `message_thread` (
-  `id` int(11) NOT NULL,
-  `version` int(11) NOT NULL,
-  `moment` datetime(6) DEFAULT NULL,
-  `title` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `message_thread`
---
-
-LOCK TABLES `message_thread` WRITE;
-/*!40000 ALTER TABLE `message_thread` DISABLE KEYS */;
-INSERT INTO `message_thread` VALUES (133,0,'2015-12-03 09:00:00.000000','MessageThread1'),(134,0,'2016-12-03 09:00:00.000000','MessageThread2'),(135,0,'2017-12-03 09:00:00.000000','MessageThread3'),(136,0,'2018-12-03 09:00:00.000000','MessageThread4'),(137,0,'2019-10-03 08:00:00.000000','MessageThread5');
-/*!40000 ALTER TABLE `message_thread` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `non_comercial_banner`
---
-
-DROP TABLE IF EXISTS `non_comercial_banner`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `non_comercial_banner` (
-  `id` int(11) NOT NULL,
-  `version` int(11) NOT NULL,
-  `slogan` varchar(255) DEFAULT NULL,
-  `target` varchar(255) DEFAULT NULL,
-  `sponsor_id` int(11) DEFAULT NULL,
-  `jingle` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `FK_h7gdwb5bu1dvickx9h13sl2tj` (`sponsor_id`),
-  CONSTRAINT `FK_h7gdwb5bu1dvickx9h13sl2tj` FOREIGN KEY (`sponsor_id`) REFERENCES `sponsor` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `non_comercial_banner`
---
-
-LOCK TABLES `non_comercial_banner` WRITE;
-/*!40000 ALTER TABLE `non_comercial_banner` DISABLE KEYS */;
-INSERT INTO `non_comercial_banner` VALUES (88,0,'Non comercial Banner test 01','https://drive.google.com/file/d/1GLE9rD9Rlt4iMz2ywFs5EEtbg_rjTuEm/view?usp=sharing',79,'https://drive.google.com/file/d/10__w8yVtwR3LujGGMYsBjIvIOBz8_DT_/view?usp=sharing'),(89,0,'Non comercial Banner test 02','https://drive.google.com/file/d/1GLE9rD9Rlt4iMz2ywFs5EEtbg_rjTuEm/view?usp=sharing',79,'https://drive.google.com/file/d/10__w8yVtwR3LujGGMYsBjIvIOBz8_DT_/view?usp=sharing'),(90,0,'Non comercial Banner test 03','https://drive.google.com/file/d/1GLE9rD9Rlt4iMz2ywFs5EEtbg_rjTuEm/view?usp=sharing',79,'https://drive.google.com/file/d/10__w8yVtwR3LujGGMYsBjIvIOBz8_DT_/view?usp=sharing'),(91,0,'Non comercial Banner test 04','https://drive.google.com/file/d/1GLE9rD9Rlt4iMz2ywFs5EEtbg_rjTuEm/view?usp=sharing',76,'https://drive.google.com/file/d/10__w8yVtwR3LujGGMYsBjIvIOBz8_DT_/view?usp=sharing'),(92,0,'Non comercial Banner test 05','https://drive.google.com/file/d/1GLE9rD9Rlt4iMz2ywFs5EEtbg_rjTuEm/view?usp=sharing',76,'https://drive.google.com/file/d/10__w8yVtwR3LujGGMYsBjIvIOBz8_DT_/view?usp=sharing');
-/*!40000 ALTER TABLE `non_comercial_banner` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -1006,33 +889,32 @@ LOCK TABLES `offer` WRITE;
 UNLOCK TABLES;
 
 --
--- Table structure for table `participant`
+-- Table structure for table `piqueras_bulletin`
 --
 
-DROP TABLE IF EXISTS `participant`;
+DROP TABLE IF EXISTS `piqueras_bulletin`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `participant` (
+CREATE TABLE `piqueras_bulletin` (
   `id` int(11) NOT NULL,
   `version` int(11) NOT NULL,
-  `authenticated_id` int(11) NOT NULL,
-  `thread_id` int(11) NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `FK80gruu22vbyiojed5sawtqc6a` (`authenticated_id`),
-  KEY `FK8mocuiguc2q27excsu2w2q9ai` (`thread_id`),
-  CONSTRAINT `FK80gruu22vbyiojed5sawtqc6a` FOREIGN KEY (`authenticated_id`) REFERENCES `authenticated` (`id`),
-  CONSTRAINT `FK8mocuiguc2q27excsu2w2q9ai` FOREIGN KEY (`thread_id`) REFERENCES `thread` (`id`)
+  `description` varchar(255) DEFAULT NULL,
+  `end_moment` datetime(6) DEFAULT NULL,
+  `link` varchar(255) DEFAULT NULL,
+  `salary` int(11) DEFAULT NULL,
+  `title` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `participant`
+-- Dumping data for table `piqueras_bulletin`
 --
 
-LOCK TABLES `participant` WRITE;
-/*!40000 ALTER TABLE `participant` DISABLE KEYS */;
-INSERT INTO `participant` VALUES (1374,0,1285,1363);
-/*!40000 ALTER TABLE `participant` ENABLE KEYS */;
+LOCK TABLES `piqueras_bulletin` WRITE;
+/*!40000 ALTER TABLE `piqueras_bulletin` DISABLE KEYS */;
+INSERT INTO `piqueras_bulletin` VALUES (21,0,'Necrosoft needs new developers. Apply here','2020-08-09 13:00:00.000000','https://www.necrosoft.com',10000000,'Developers Wanted!'),(22,0,'MApple needs new designers. Apply here','2020-08-07 10:00:00.000000','https://www.mapple.com',20000000,'Designers Wanted!'),(23,0,'MASA needs new engineers. Apply here','2020-02-05 10:00:00.000000','https://www.masa.com',50000000,'Engineers Wanted!');
+/*!40000 ALTER TABLE `piqueras_bulletin` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -1117,42 +999,8 @@ CREATE TABLE `shout` (
 
 LOCK TABLES `shout` WRITE;
 /*!40000 ALTER TABLE `shout` DISABLE KEYS */;
-INSERT INTO `shout` VALUES (67,0,'Eduardo Miguel Botía Domingo','2019-09-03 09:41:00.000000','Mensaje de prueba 1'),(68,0,'Eduardo Miguel Botía Domingo','2019-08-02 21:48:00.000000','Mensaje de prueba 2'),(69,0,'Eduardo Miguel Botía Domingo','2019-02-03 13:32:00.000000','Mensaje de prueba 3'),(70,0,'Eduardo Miguel Botía Domingo','2019-04-21 16:55:00.000000','Mensaje de prueba 4'),(71,0,'Eduardo Miguel Botía Domingo','2019-09-03 17:42:00.000000','Mensaje de prueba 5'),(72,0,'Eduardo Miguel Botía Domingo','2019-09-03 17:42:00.000000','Mensaje de prueba 6'),(73,0,'Eduardo Miguel Botía Domingo','2019-09-03 17:42:00.000000','Mensaje de prueba 7');
+INSERT INTO `shout` VALUES (6,0,'John Doe','2019-09-09 08:00:00.000000','I\'m happy!'),(7,0,'Jane Doe','2019-08-09 13:00:00.000000','I\'m the master of my room!'),(8,0,'Foo Bar','2019-09-06 22:00:00.000000','Just turning 20!');
 /*!40000 ALTER TABLE `shout` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `solicitud`
---
-
-DROP TABLE IF EXISTS `solicitud`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `solicitud` (
-  `id` int(11) NOT NULL,
-  `version` int(11) NOT NULL,
-  `deadline` datetime(6) DEFAULT NULL,
-  `moment` datetime(6) DEFAULT NULL,
-  `reward_amount` double DEFAULT NULL,
-  `reward_currency` varchar(255) DEFAULT NULL,
-  `text` varchar(255) DEFAULT NULL,
-  `ticker` varchar(255) DEFAULT NULL,
-  `title` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `UK_rea5aivw0b4fiu93s509u9lky` (`ticker`),
-  KEY `IDXd37rv1cyj5dvbd63k6progy7q` (`deadline`),
-  KEY `IDX2qy5jkiqwk6f13kkfq8pu61le` (`ticker`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `solicitud`
---
-
-LOCK TABLES `solicitud` WRITE;
-/*!40000 ALTER TABLE `solicitud` DISABLE KEYS */;
-INSERT INTO `solicitud` VALUES (88,0,'2019-08-10 08:35:00.000000','2019-06-10 08:35:00.000000',40.2,'€','This is a description of a sample request','RAAAA-00000','Sample request 01'),(89,0,'2019-10-10 10:00:00.000000','2019-06-09 22:00:00.000000',65,'€','This is a description of another request','RBBBB-00000','Sample request 02'),(90,0,'1901-10-10 19:00:39.000000','1900-10-10 19:00:39.000000',100.5,'€','This is a description of a very old request','RCCCC-00000','Sample request 03'),(91,0,'2023-03-08 05:35:00.000000','2019-06-10 08:35:00.000000',450.2,'€','This is a description of a sample request','RDDDD-00000','Sample request 04'),(92,0,'2023-05-04 17:00:00.000000','2019-06-09 22:00:00.000000',680.9,'€','This is a description of another request','REEEE-00000','Sample request 05'),(93,0,'2023-05-04 17:00:00.000000','2019-06-09 22:00:00.000000',680.9,'€','This is a description of another request','RFFFF-00000','Sample request 06'),(94,0,'2023-05-04 17:00:00.000000','2019-06-09 22:00:00.000000',680.9,'€','This is a description of another request','RGGGG-00000','Sample request 07');
-/*!40000 ALTER TABLE `solicitud` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -1212,6 +1060,32 @@ LOCK TABLES `thread` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `thread_message`
+--
+
+DROP TABLE IF EXISTS `thread_message`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `thread_message` (
+  `thread_id` int(11) NOT NULL,
+  `message_id` int(11) NOT NULL,
+  UNIQUE KEY `UK_1eigvav9ca1mhm39x3jh0mykc` (`message_id`),
+  KEY `FKgjodhp3io8v829t92y1tdtb7u` (`thread_id`),
+  CONSTRAINT `FKgjodhp3io8v829t92y1tdtb7u` FOREIGN KEY (`thread_id`) REFERENCES `thread` (`id`),
+  CONSTRAINT `FKr4bttgbwdtkxj4j2047m6n1ma` FOREIGN KEY (`message_id`) REFERENCES `message` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `thread_message`
+--
+
+LOCK TABLES `thread_message` WRITE;
+/*!40000 ALTER TABLE `thread_message` DISABLE KEYS */;
+/*!40000 ALTER TABLE `thread_message` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `user_account`
 --
 
@@ -1241,7 +1115,7 @@ CREATE TABLE `user_account` (
 
 LOCK TABLES `user_account` WRITE;
 /*!40000 ALTER TABLE `user_account` DISABLE KEYS */;
-INSERT INTO `user_account` VALUES (1,0,_binary '\0','john.doe@acme.com','John',NULL,NULL,NULL,'Doe','$2a$05$InN1Yub8VA9H8wHhUXx.k.ZDwl8KnFNpUyMAJZ9VUsC.rE9DpqNWq','anonymous'),(3,0,_binary '','administrator@acme.com','Administrator',NULL,NULL,NULL,'Acme.com','$2a$05$/FZUxvAEO.Xv8.aRD/NK8OXHpQBqmro2U6BvOvJchqjRT3OFKFwkK','administrator');
+INSERT INTO `user_account` VALUES (1,0,_binary '\0','john.doe@acme.com','John',NULL,NULL,NULL,'Doe','$2a$05$E1/EyxHSSq.vCVxYmElOxOLCcgj5aMYMyOV2.dYSwZJFQqSCici0u','anonymous'),(3,0,_binary '','administrator@acme.com','Administrator',NULL,NULL,NULL,'Acme.com','$2a$05$2uq6h0FtEbS3axY1cQpdW.iwolzF3ERxD2uaZ.SbrhxPCWIUyHpEK','administrator');
 /*!40000 ALTER TABLE `user_account` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1272,6 +1146,35 @@ LOCK TABLES `worker` WRITE;
 /*!40000 ALTER TABLE `worker` DISABLE KEYS */;
 /*!40000 ALTER TABLE `worker` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Table structure for table `x11`
+--
+
+DROP TABLE IF EXISTS `x11`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `x11` (
+  `id` int(11) NOT NULL,
+  `version` int(11) NOT NULL,
+  `more_info` varchar(255) DEFAULT NULL,
+  `text` varchar(255) DEFAULT NULL,
+  `job_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FKbrgwekgrehsryob71umqf33as` (`job_id`),
+  CONSTRAINT `FKbrgwekgrehsryob71umqf33as` FOREIGN KEY (`job_id`) REFERENCES `job` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `x11`
+--
+
+LOCK TABLES `x11` WRITE;
+/*!40000 ALTER TABLE `x11` DISABLE KEYS */;
+INSERT INTO `x11` VALUES (1323,0,'http://www.example1.com','This is the text 1',1317),(1324,0,'http://www.example2.com','This is the text 2',1318),(1325,0,'http://www.example3.com','This is the text 3',1319),(1326,0,'http://www.example4.com','This is the text 4',1320),(1327,0,'http://www.example5.com','This is the text 5',1321),(1328,0,'http://www.example6.com','This is the text 6',1322);
+/*!40000 ALTER TABLE `x11` ENABLE KEYS */;
+UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -1282,4 +1185,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-01-15 19:35:02
+-- Dump completed on 2020-01-15 20:57:39
