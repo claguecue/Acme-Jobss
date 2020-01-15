@@ -51,6 +51,8 @@
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
 			<acme:menu-suboption code="master.menu.administrator.user-accounts" action="/administrator/user-account/list"/>
 			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.user-account.auditor-requests" action="/administrator/auditor-request/list" access="hasRole('Administrator')"/>
+			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.chart" action="/administrator/chart/show"/>
 			<acme:menu-suboption code="master.menu.administrator.dashboard" action="/administrator/dashboard/show"/>
 			<acme:menu-separator/>
@@ -115,7 +117,6 @@
 			<acme:menu-suboption code="master.menu.user-account.auditor" action="/authenticated/auditor-request/show" access="hasRole('Auditor')"/>
 			<acme:menu-suboption code="master.menu.user-account.become-sponsor" action="/authenticated/sponsor/create" access="!hasRole('Sponsor')"/>
 			<acme:menu-suboption code="master.menu.user-account.sponsor" action="/authenticated/sponsor/update" access="hasRole('Sponsor')"/>
-	        <acme:menu-suboption code="master.menu.user-account.auditor-requests" action="/administrator/auditor-request/list" access="hasRole('Administrator')"/>
 	
 		</acme:menu-option>
 
